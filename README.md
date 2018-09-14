@@ -1,2 +1,2 @@
-# Grimorio-do-Mestre
-Grimório do mestre é um aplicativo móvel que tem como objetivo auxilar mestres de mesas de RPG a gerenciar suas campanhas, desde as fichas dos jogadores até anotações de sessões.
+# Master's Grimoire
+Master's Grimoire is a mobile applicative that aims to help RPG table masters manage their campaigns, from player tokens to session notes.
