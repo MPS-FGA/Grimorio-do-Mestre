@@ -29,3 +29,8 @@ To workaround this issue change (or update) */etc/sysctl.conf* with the followin
 fs.inotify.max_user_instances=1024
 fs.inotify.max_user_watches=12288
 ```
+
+And to apply that changes, run:
+```
+sudo sysctl -p
+```

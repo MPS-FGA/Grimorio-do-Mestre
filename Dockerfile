@@ -5,3 +5,5 @@ WORKDIR /app
 RUN apk add --no-cache bash
 
 ADD . /app
+
+RUN yarn install
