@@ -1,9 +1,11 @@
 FROM node:10-alpine
 
-WORKDIR /app
+WORKDiR /app
 
 RUN apk add --no-cache bash
 
-ADD . /app
+COPY /MasterGrimoire/package.json /app/MasterGrimoire/
+
+WORKDIR /app/MasterGrimoire
 
 RUN yarn install
