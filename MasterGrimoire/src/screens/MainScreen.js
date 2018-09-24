@@ -11,37 +11,27 @@ const styles = StyleSheet.create({
   }
 });
 
-class ClassesList extends Component {
+class MainScreen extends Component {
   state = {
-    classes: []
-  };
-
-  componentDidMount() {
-    this.fetchData();
-  }
-
-  fetchData = async () => {
-    const response = await fetch("http://www.dnd5eapi.co/api/classes/");
-    const json = await response.json();
-    this.setState({ classes: json.results });
+    choices: [{"option": "Classes", "screen": "ClassesList"}, {"option": "Races", "screen": "RacesList"}]
   };
   
   _renderItem = ({item}) => {
     return  (
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={{flexDirection:'row', padding: 10, alignItems:'center'}}>
-        <Text style={{marginLeft: 10}}>{item.name}</Text>
+        <Text style={{marginLeft: 10}}>{item.option}</Text>
       </TouchableOpacity>
     )
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate('Description', {hero: item})
+    this.props.navigation.navigate(item.screen, {option: item})
   }
 
   render() {
     return (
         <FlatList
-          data={this.state.classes}
+          data={this.state.choices}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
@@ -52,4 +42,4 @@ class ClassesList extends Component {
   }
 }
 
-export default ClassesList;
+export default MainScreen;
