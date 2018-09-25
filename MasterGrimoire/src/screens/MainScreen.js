@@ -31,8 +31,16 @@ class MainScreen extends Component {
   }
 
   static navigationOptions = {
-    title: APP_NAME
-}
+    title: APP_NAME,
+    headerStyle: {
+      backgroundColor: '#000000',
+    },
+    headerTintColor: '#f00',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 30,
+    },
+  };
 
   render() {
     return (

@@ -13,19 +13,32 @@ const styles = StyleSheet.create({
 });
 
 class ClassesList extends Component {
-  state = {
-    classes: []
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lists: [],
+      pageInfo: [],
+    };
+  }
+
+  componentWillMount(){
+    const { option } = this.props.navigation.state.params
+    this.setState({ pageInfo: option })
+  }
 
   componentDidMount() {
     this.fetchData();
+    // Used to change the header title dynamically.
+    const title = this.state.pageInfo.option
+    this.props.navigation.setParams({title: title})
   }
 
   fetchData = async () => {
-    const { option } = this.props.navigation.state.params
-    const response = await fetch(`${BASE_URL}${option.endpoint}`);
+    const endpoint = this.state.pageInfo.endpoint
+    const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
-    this.setState({ classes: json.results });
+    this.setState({ lists: json.results });
   };
   
   _renderItem = ({item}) => {
@@ -40,14 +53,25 @@ class ClassesList extends Component {
     this.props.navigation.navigate('Description', {hero: item})
   }
 
-  static navigationOptions = {
-    title: 'Vamos lá!'
-}
+  static navigationOptions = ({ navigation }) => {
+    return {
+      // If it finds the title defined dynamically, uses it. If not, uses default message.
+      title: navigation.getParam('title', 'Options Available'),
+      headerStyle: {
+        backgroundColor: '#000000',
+      },
+      headerTintColor: '#f00',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: 30,
+      },
+    };
+  };
 
   render() {
     return (
         <FlatList
-          data={this.state.classes}
+          data={this.state.lists}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>

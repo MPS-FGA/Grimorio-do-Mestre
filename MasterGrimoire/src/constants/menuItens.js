@@ -1,12 +1,10 @@
 const MENU_ITENS = [
     {
         "option": "Classes", 
-        "screen": "ClassesList",
         "endpoint": "/classes/"
     },
     {
-        "option": "Races", 
-        "screen": "RacesList", 
+        "option": "Races",
         "endpoint": "/races/"
     }
 ]
