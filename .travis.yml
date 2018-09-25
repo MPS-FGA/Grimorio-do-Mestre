@@ -18,5 +18,5 @@ before_install:
 
 script:
     - sudo docker-compose up -d
-    - sudo docker-compose exec app yarn install jest
+    - sudo docker-compose exec app yarn add jest
     - sudo docker-compose exec app yarn test
