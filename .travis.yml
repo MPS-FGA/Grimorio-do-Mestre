@@ -1,22 +1,20 @@
 sudo: required
 
 services:
-  - docker
+    - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.22.0
+    - DOCKER_COMPOSE_VERSION=1.22.0
 
 cache:
-  directories:
-  - node_modules
+    directories:
+        - node_modules
 
 before_install:
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
+    - sudo rm /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+    - chmod +x docker-compose
+    - sudo mv docker-compose /usr/local/bin
 
-script:
-  - sudo docker-compose up -d
-  - ls
-  - sudo docker-compose run app yarn test
+script:   
+    - sudo docker-compose run app yarn test
