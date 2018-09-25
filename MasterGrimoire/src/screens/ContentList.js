@@ -4,15 +4,31 @@ import { BASE_URL } from '../constants/generalConstants';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 15,
     flex: 1,
+    marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
+  },
+
+  buttons: {
+    flexDirection:'row',
+    padding: 10, 
+    alignItems:'center'
+  },
+
+  content: {
+    marginLeft: 10,
+    fontSize: 20
+  },
+
+  separator: {
+    height:1, 
+    backgroundColor: '#f7f7f7'
   }
 });
 
-class ClassesList extends Component {
+class ContentList extends Component {
   constructor(props) {
     super(props);
 
@@ -43,8 +59,10 @@ class ClassesList extends Component {
   
   _renderItem = ({item}) => {
     return  (
-      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={{flexDirection:'row', padding: 10, alignItems:'center'}}>
-        <Text style={{marginLeft: 10}}>{item.name}</Text>
+      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+        <Text style={styles.content}>
+          {item.name}
+        </Text>
       </TouchableOpacity>
     )
   }
@@ -70,16 +88,18 @@ class ClassesList extends Component {
 
   render() {
     return (
+      <View style={styles.container}>
         <FlatList
           data={this.state.lists}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
-            <View style={{height:1, backgroundColor: '#f7f7f7'}} />
+            <View style={styles.separator} />
           }
         />
+      </View>
     );
   }
 }
 
-export default ClassesList;
+export default ContentList;

@@ -5,11 +5,27 @@ import { APP_NAME } from '../constants/generalConstants';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 15,
     flex: 1,
+    marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
+  },
+
+  buttons: {
+    flexDirection:'row',
+    padding: 10, 
+    alignItems:'center'
+  },
+
+  content: {
+    marginLeft: 10,
+    fontSize: 20
+  },
+
+  separator: {
+    height:1, 
+    backgroundColor: '#f7f7f7'
   }
 });
 
@@ -20,14 +36,16 @@ class MainScreen extends Component {
   
   _renderItem = ({item}) => {
     return  (
-      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={{flexDirection:'row', padding: 10, alignItems:'center'}}>
-        <Text style={{marginLeft: 10}}>{item.option}</Text>
+      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+        <Text style={styles.content}>
+          {item.option}
+        </Text>
       </TouchableOpacity>
     )
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate('ClassesList', {option: item})
+    this.props.navigation.navigate(item.screen, {option: item})
   }
 
   static navigationOptions = {
@@ -44,14 +62,16 @@ class MainScreen extends Component {
 
   render() {
     return (
+      <View style={styles.container}>
         <FlatList
           data={this.state.choices}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
-            <View style={{height:1, backgroundColor: '#f7f7f7'}} />
+            <View style={styles.separator} />
           }
         />
+      </View>
     );
   }
 }
