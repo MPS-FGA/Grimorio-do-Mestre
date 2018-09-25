@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
+import MENU_ITENS from '../constants/menuItens';
+import { APP_NAME } from '../constants/generalConstants';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
 
 class MainScreen extends Component {
   state = {
-    choices: [{"option": "Classes", "screen": "ClassesList"}, {"option": "Races", "screen": "RacesList"}]
+    choices: MENU_ITENS
   };
   
   _renderItem = ({item}) => {
@@ -25,8 +27,12 @@ class MainScreen extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate(item.screen, {option: item})
+    this.props.navigation.navigate('ClassesList', {option: item})
   }
+
+  static navigationOptions = {
+    title: APP_NAME
+}
 
   render() {
     return (

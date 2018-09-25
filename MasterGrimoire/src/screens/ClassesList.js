@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
+import { BASE_URL } from '../constants/generalConstants';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +22,8 @@ class ClassesList extends Component {
   }
 
   fetchData = async () => {
-    const response = await fetch("http://www.dnd5eapi.co/api/classes/");
+    const { option } = this.props.navigation.state.params
+    const response = await fetch(`${BASE_URL}${option.endpoint}`);
     const json = await response.json();
     this.setState({ classes: json.results });
   };
@@ -37,6 +39,10 @@ class ClassesList extends Component {
   _onItemPress = (item) => {
     this.props.navigation.navigate('Description', {hero: item})
   }
+
+  static navigationOptions = {
+    title: 'Vamos lá!'
+}
 
   render() {
     return (
