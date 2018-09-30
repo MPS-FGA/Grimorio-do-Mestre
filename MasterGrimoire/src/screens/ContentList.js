@@ -1,33 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import { BASE_URL } from '../constants/generalConstants';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#000000"
-  },
-
-  buttons: {
-    flexDirection:'row',
-    padding: 10,
-    alignItems:'center'
-  },
-
-  content: {
-    marginLeft: 0,
-    fontSize: 20,
-    color: 'white'
-  },
-
-  separator: {
-    height:1,
-    backgroundColor: '#4B0077'
-  }
-});
+import {styles} from '../styles/PagStyles';
 
 class ContentList extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
-
-
+import { TouchableOpacity, FlatList, Text, View } from "react-native";
+import {styles} from '../styles/PagStyles';
+/*
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -13,15 +13,10 @@ const styles = StyleSheet.create({
   content: {
     marginLeft: 10,
     fontSize: 20,
-    color :'white'
+    color :'white',
   },
-
-  separator: {
-    height:1,
-    backgroundColor: '#4B0077'
-  }
 });
-
+*/
 class Description extends Component {
   state = {
 
