@@ -13,17 +13,19 @@ const styles = StyleSheet.create({
 
   buttons: {
     flexDirection:'row',
-    padding: 10, 
+    padding: 10,
     alignItems:'center'
   },
 
   content: {
-    marginLeft: 10,
-    fontSize: 20
+    marginLeft: 0,
+    fontSize: 20,
+    backgroundColor:'#CBD4B3',
+    color: 'white'
   },
 
   separator: {
-    height:1, 
+    height:1,
     backgroundColor: '#f7f7f7'
   }
 });
@@ -37,7 +39,6 @@ class ContentList extends Component {
       pageInfo: [],
     };
   }
-
   componentWillMount(){
     const { option } = this.props.navigation.state.params
     this.setState({ pageInfo: option })
@@ -56,14 +57,19 @@ class ContentList extends Component {
     const json = await response.json();
     this.setState({ lists: json.results });
   };
-  
+
   _renderItem = ({item}) => {
     return  (
+      <View style={styles.container}>
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
-        <Text style={styles.content}>
-          {item.name}
-        </Text>
+        <View style={styles.container}>
+          <Text style={styles.content}>
+            {item.name}
+          </Text>
+        </View>
       </TouchableOpacity>
+    </View>
+
     )
   }
 
@@ -76,7 +82,7 @@ class ContentList extends Component {
       // If it finds the title defined dynamically, uses it. If not, uses default message.
       title: navigation.getParam('title', 'Options Available'),
       headerStyle: {
-        backgroundColor: '#000000',
+        backgroundColor: '#C9D1B1',
       },
       headerTintColor: '#f00',
       headerTitleStyle: {
@@ -88,7 +94,7 @@ class ContentList extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View >
         <FlatList
           data={this.state.lists}
           renderItem={this._renderItem}

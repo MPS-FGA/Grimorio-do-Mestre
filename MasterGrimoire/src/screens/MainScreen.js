@@ -9,12 +9,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: '#000000',
+    color: 'red'
   },
 
   buttons: {
     flexDirection:'row',
-    padding: 10, 
+    padding: 50,
     alignItems:'center'
   },
 
@@ -24,8 +25,8 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    height:1, 
-    backgroundColor: '#f7f7f7'
+    height:1,
+    backgroundColor: '#4B0077'
   }
 });
 
@@ -33,7 +34,7 @@ class MainScreen extends Component {
   state = {
     choices: MENU_ITENS
   };
-  
+
   _renderItem = ({item}) => {
     return  (
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
@@ -51,9 +52,9 @@ class MainScreen extends Component {
   static navigationOptions = {
     title: APP_NAME,
     headerStyle: {
-      backgroundColor: '#000000',
+      backgroundColor: '#220E35',
     },
-    headerTintColor: '#f00',
+    headerTintColor: '#f00f',
     headerTitleStyle: {
       fontWeight: 'bold',
       fontSize: 30,
