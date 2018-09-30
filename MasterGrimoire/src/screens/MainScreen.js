@@ -9,8 +9,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#000000',
-    color: 'red'
+    backgroundColor: '#000000'
   },
 
   buttons: {
@@ -21,7 +20,8 @@ const styles = StyleSheet.create({
 
   content: {
     marginLeft: 10,
-    fontSize: 20
+    fontSize: 20,
+    color :'white'
   },
 
   separator: {
@@ -52,9 +52,9 @@ class MainScreen extends Component {
   static navigationOptions = {
     title: APP_NAME,
     headerStyle: {
-      backgroundColor: '#220E35',
+      backgroundColor: '#8D6AB1',
     },
-    headerTintColor: '#f00f',
+    headerTintColor: '#ffffff',
     headerTitleStyle: {
       fontWeight: 'bold',
       fontSize: 30,

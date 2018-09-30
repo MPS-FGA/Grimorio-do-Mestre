@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#000000"
   },
 
   buttons: {
@@ -20,13 +20,12 @@ const styles = StyleSheet.create({
   content: {
     marginLeft: 0,
     fontSize: 20,
-    backgroundColor:'#CBD4B3',
     color: 'white'
   },
 
   separator: {
     height:1,
-    backgroundColor: '#f7f7f7'
+    backgroundColor: '#4B0077'
   }
 });
 
@@ -61,12 +60,11 @@ class ContentList extends Component {
   _renderItem = ({item}) => {
     return  (
       <View style={styles.container}>
+
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
-        <View style={styles.container}>
           <Text style={styles.content}>
             {item.name}
           </Text>
-        </View>
       </TouchableOpacity>
     </View>
 
@@ -82,9 +80,9 @@ class ContentList extends Component {
       // If it finds the title defined dynamically, uses it. If not, uses default message.
       title: navigation.getParam('title', 'Options Available'),
       headerStyle: {
-        backgroundColor: '#C9D1B1',
+        backgroundColor: '#8D6AB1',
       },
-      headerTintColor: '#f00',
+      headerTintColor: '#ffffff',
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: 30,
