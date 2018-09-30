@@ -5,7 +5,7 @@ import {styles} from '../styles/PagStyles';
 const stylesDescription = StyleSheet.create({
   title :{
     fontSize:40,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   }
 });
 
@@ -32,12 +32,11 @@ class Description extends Component {
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.content}>
-          <Text style={stylesDescription.title}>Hit Points</Text>{'\n'}{'\n'}
+          <Text style={stylesDescription.title}>Hit Points:</Text>{'\n'}{'\n'}
             <Text style={{fontSize:22,fontWeight:'bold'}}>Hit Dice:</Text> 1d12 per barbarian level.{'\n'}{'\n'}
             <Text style={{fontSize:22,fontWeight:'bold'}}>Hit Points at 1st Level:</Text> 12 + your Constitution modifier.{'\n'}{'\n'}
             <Text style={{fontSize:22,fontWeight:'bold'}}>Hit Points at Higher Levels:</Text> 1d12 (or 7) + your Constitution modifier per barbarian level after 1st.{'\n'}{'\n'}
-
-          <Text style={stylesDescription.title}>Proficiencies</Text>{'\n'}{'\n'}
+          <Text style={stylesDescription.title}>Proficiencies:</Text>{'\n'}{'\n'}
               <Text style={{fontSize:22,fontWeight:'bold'}}>Armor:</Text> Light armor, medium armor, shields.{'\n'}{'\n'}
               <Text style={{fontSize:22,fontWeight:'bold'}}>Weapons:</Text> Simple weapons, martial weapons.{'\n'}{'\n'}
               <Text style={{fontSize:22,fontWeight:'bold'}}>Tools:</Text> None.{'\n'}{'\n'}
@@ -45,7 +44,7 @@ class Description extends Component {
               <Text style={{fontSize:22,fontWeight:'bold'}}>Skills:</Text> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival.{'\n'}{'\n'}
         </Text>
       </View>
-    </ScrollView>  
+    </ScrollView>
 
     );
   }
