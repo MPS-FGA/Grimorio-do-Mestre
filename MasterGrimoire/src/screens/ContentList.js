@@ -59,14 +59,12 @@ class ContentList extends Component {
 
   _renderItem = ({item}) => {
     return  (
-      <View style={styles.container}>
 
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
           <Text style={styles.content}>
             {item.name}
           </Text>
       </TouchableOpacity>
-    </View>
 
     )
   }
@@ -92,7 +90,7 @@ class ContentList extends Component {
 
   render() {
     return (
-      <View >
+      <View style={styles.container}>
         <FlatList
           data={this.state.lists}
           renderItem={this._renderItem}
