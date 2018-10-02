@@ -13,6 +13,5 @@ before_install:
     - sudo mv docker-compose /usr/local/bin
 
 script:
-    - sudo docker-compose up -d
-    - sudo docker-compose exec app yarn add jest
-    - sudo docker-compose exec app yarn test
+    - sudo docker-compose run app yarn add jest
+    - sudo docker-compose run app yarn test
