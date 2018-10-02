@@ -71,6 +71,57 @@ class DetailPage extends Component {
     return(renderedItem);
   }
 
+  _renderRace = () => {
+
+    itemJson = this.state.rawJson;
+
+    console.log('################### itemJson.starting_proficiency_options: ' + JSON.stringify(itemJson.starting_proficiency_options))
+
+    return(
+      <View>
+        <Text><Text>Speed</Text>: {itemJson.speed}</Text>
+        <Text><Text>Alignment</Text>: {itemJson.alignment}</Text>
+        <Text><Text>Age</Text>: {itemJson.age}</Text>
+        <Text><Text>Size</Text>: {itemJson.size} - {itemJson.size_description}</Text>
+        {(typeof itemJson.starting_proficiencies !== 'undefined' && itemJson.starting_proficiencies.length > 0) && (
+            <View>
+              <Text><Text>Starting Proficiencies</Text>: </Text>
+              {this._renderlistAtribute(itemJson.starting_proficiencies)}
+            </View>
+        )}
+        {(typeof itemJson.starting_proficiency_options !== 'undefined'
+          && typeof itemJson.starting_proficiency_options.from !== 'undefined' && itemJson.starting_proficiency_options.from.length > 0) && (
+            <View>
+              <Text><Text>Starting proficiency options</Text>:</Text>
+              <Text><Text>Can choose </Text>: {itemJson.starting_proficiency_options.choose}</Text>
+              {this._renderlistAtribute(itemJson.starting_proficiency_options.from)}
+            </View>
+        )}
+        <Text><Text>Languages Description</Text>: {itemJson.language_desc}</Text>
+        {(typeof itemJson.languages !== 'undefined' && itemJson.languages.length > 0) && (
+            <View>
+              <Text><Text>Languages</Text>: </Text>
+              {this._renderlistAtribute(itemJson.languages)}
+            </View>
+        )}
+        {(typeof itemJson.traits !== 'undefined' && itemJson.traits.length > 0) && (
+            <View>
+              <Text><Text>Traits</Text>: </Text>
+              {this._renderlistAtribute(itemJson.traits)}
+            </View>
+        )}
+        <Text><Text>Ability bonuses</Text>: {itemJson.ability_bonuses}</Text>
+        {(typeof itemJson.subraces !== 'undefined' && itemJson.subraces.length > 0) && (
+            <View>
+              <Text><Text>Subraces</Text>: </Text>
+              {this._renderlistAtribute(itemJson.subraces)}
+            </View>
+        )}
+      </View>
+    )
+
+  }
+
   _renderlistAtribute = (listAtribute) => {
     return(
       <FlatList
