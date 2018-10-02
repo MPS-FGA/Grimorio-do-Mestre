@@ -122,6 +122,45 @@ class DetailPage extends Component {
 
   }
 
+  _renderClass = () => {
+
+    itemJson = this.state.rawJson;
+    return(
+      <View>
+        <Text><Text>Hit dice</Text>: {itemJson.hit_die}</Text>
+        {(typeof itemJson.proficiencies !== 'undefined' && itemJson.proficiencies.length > 0) && (
+            <View>
+              <Text><Text>Proficiencies</Text>: </Text>
+              {this._renderlistAtribute(itemJson.proficiencies)}
+            </View>
+        )}
+
+        {(typeof itemJson.proficiency_choices !== 'undefined'
+          && typeof itemJson.proficiency_choices.from !== 'undefined' && itemJson.proficiency_choices.from.length > 0) && (
+            <View>
+              <Text><Text>Proficiency choices</Text>:</Text>
+              <Text><Text>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
+              {this._renderlistAtribute(itemJson.proficiency_choices.from)}
+            </View>
+        )}
+        {(typeof itemJson.saving_throws !== 'undefined' && itemJson.saving_throws.length > 0) && (
+            <View>
+              <Text><Text>Saving Throws</Text>: </Text>
+              {this._renderlistAtribute(itemJson.saving_throws)}
+            </View>
+        )}
+
+        {(typeof itemJson.subclasses !== 'undefined' && itemJson.subclasses.length > 0) && (
+            <View>
+              <Text><Text>Subclasses</Text>: </Text>
+              {this._renderlistAtribute(itemJson.subclasses)}
+            </View>
+        )}
+
+      </View>
+    )
+  }
+
   _renderlistAtribute = (listAtribute) => {
     return(
       <FlatList
