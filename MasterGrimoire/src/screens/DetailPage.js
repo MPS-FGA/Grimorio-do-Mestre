@@ -39,6 +39,22 @@ class DetailPage extends Component {
   };
 
 
+  static navigationOptions = ({ navigation }) => {
+    return {
+      // If it finds the title defined dynamically, uses it. If not, uses default message.
+      title: navigation.getParam('title', 'Options Available'),
+      headerStyle: {
+        backgroundColor: '#000000',
+      },
+      headerTintColor: '#f00',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: 30,
+      },
+    };
+  };
+
+
   _renderDetail (){
     switch(this.state.pageInfo.option) {
     case 'Races':
@@ -53,6 +69,35 @@ class DetailPage extends Component {
     }
 
     return(renderedItem);
+  }
+
+  _renderlistAtribute = (listAtribute) => {
+    return(
+      <FlatList
+        data={listAtribute}
+        renderItem={this._renderListItem}
+        keyExtractor = { (item) => item.url }
+      />
+    )
+  }
+
+
+
+  _renderListItem = ({item}) => {
+    return  (
+      <Text>
+        {item.name}
+      </Text>
+    )
+  }
+
+
+  render() {
+      return(
+        <ScrollView >
+          {this._renderDetail()}
+        </ScrollView>
+      )
   }
 
 }
