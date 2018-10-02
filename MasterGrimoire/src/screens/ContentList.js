@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
   buttons: {
     flexDirection:'row',
-    padding: 10, 
+    padding: 10,
     alignItems:'center'
   },
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    height:1, 
+    height:1,
     backgroundColor: '#f7f7f7'
   }
 });
@@ -55,8 +55,9 @@ class ContentList extends Component {
     const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ lists: json.results });
+    // console.log('################### this.state.lists: ' + JSON.stringify(this.state.lists))
   };
-  
+
   _renderItem = ({item}) => {
     return  (
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
@@ -68,7 +69,7 @@ class ContentList extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate('Description', {hero: item})
+    this.props.navigation.navigate('DetailPage', {detailArg : {item : item, pageInfo : this.state.pageInfo } })
   }
 
   static navigationOptions = ({ navigation }) => {
