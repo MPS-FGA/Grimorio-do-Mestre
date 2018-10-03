@@ -22,20 +22,13 @@ class DetailPage extends Component {
     this.fetchData();
     // Used to change the header title dynamically.
     const title = this.state.item.name
-
-    // console.log('################### this.state.item.name: ' + JSON.stringify(this.state.item.name))
     this.props.navigation.setParams({title: title})
-
-    // console.log('################### this.state.rawJson: ' + JSON.stringify(this.state.rawJson))
   }
 
   fetchData = async () => {
     const response = await fetch(this.state.item.url);
-    // console.log('################### this.state.item.url: ' + JSON.stringify(this.state.item.url))
-    // const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ rawJson: json });
-    // console.log('################### this.state.rawJson: ' + JSON.stringify(this.state.rawJson))
   };
 
 
@@ -72,10 +65,7 @@ class DetailPage extends Component {
   }
 
   _renderRace = () => {
-
-    itemJson = this.state.rawJson;
-
-    console.log('################### itemJson.starting_proficiency_options: ' + JSON.stringify(itemJson.starting_proficiency_options))
+    const itemJson = this.state.rawJson;
 
     return(
       <View>

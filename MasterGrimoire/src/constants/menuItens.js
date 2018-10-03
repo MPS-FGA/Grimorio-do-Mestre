@@ -1,6 +1,6 @@
 const MENU_ITENS = [
     {
-        "option": "Classes", 
+        "option": "Classes",
         "endpoint": "/classes/",
         "screen": "ContentList"
     },
