@@ -1,32 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import { BASE_URL } from '../constants/generalConstants';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-
-  buttons: {
-    flexDirection:'row',
-    padding: 10, 
-    alignItems:'center'
-  },
-
-  content: {
-    marginLeft: 10,
-    fontSize: 20
-  },
-
-  separator: {
-    height:1, 
-    backgroundColor: '#f7f7f7'
-  }
-});
+import {styles} from '../styles/PagStyles';
 
 class ContentList extends Component {
   constructor(props) {
@@ -37,7 +12,6 @@ class ContentList extends Component {
       pageInfo: [],
     };
   }
-
   componentWillMount(){
     const { option } = this.props.navigation.state.params
     this.setState({ pageInfo: option })
@@ -56,14 +30,16 @@ class ContentList extends Component {
     const json = await response.json();
     this.setState({ lists: json.results });
   };
-  
+
   _renderItem = ({item}) => {
     return  (
+
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
-        <Text style={styles.content}>
-          {item.name}
-        </Text>
+          <Text style={styles.content}>
+            {item.name}
+          </Text>
       </TouchableOpacity>
+
     )
   }
 
@@ -76,9 +52,9 @@ class ContentList extends Component {
       // If it finds the title defined dynamically, uses it. If not, uses default message.
       title: navigation.getParam('title', 'Options Available'),
       headerStyle: {
-        backgroundColor: '#000000',
+        backgroundColor: '#8D6AB1',
       },
-      headerTintColor: '#f00',
+      headerTintColor: '#ffffff',
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: 30,

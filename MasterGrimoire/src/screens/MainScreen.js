@@ -2,38 +2,13 @@ import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import MENU_ITENS from '../constants/menuItens';
 import { APP_NAME } from '../constants/generalConstants';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-
-  buttons: {
-    flexDirection:'row',
-    padding: 10, 
-    alignItems:'center'
-  },
-
-  content: {
-    marginLeft: 10,
-    fontSize: 20
-  },
-
-  separator: {
-    height:1, 
-    backgroundColor: '#f7f7f7'
-  }
-});
+import {styles} from '../styles/PagStyles';
 
 class MainScreen extends Component {
   state = {
     choices: MENU_ITENS
   };
-  
+
   _renderItem = ({item}) => {
     return  (
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
@@ -51,9 +26,9 @@ class MainScreen extends Component {
   static navigationOptions = {
     title: APP_NAME,
     headerStyle: {
-      backgroundColor: '#000000',
+      backgroundColor: '#8D6AB1',
     },
-    headerTintColor: '#f00',
+    headerTintColor: '#ffffff',
     headerTitleStyle: {
       fontWeight: 'bold',
       fontSize: 30,
