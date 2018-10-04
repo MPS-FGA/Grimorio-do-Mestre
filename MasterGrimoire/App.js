@@ -3,8 +3,7 @@ import { StatusBar, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import ContentList from './src/screens/ContentList';
 import MainScreen from './src/screens/MainScreen';
-import Description from './src/screens/Description';
-
+import DetailPage from './src/screens/DetailPage';
 
 const App = createStackNavigator({
   MainScreen: {
@@ -13,8 +12,8 @@ const App = createStackNavigator({
   ContentList: {
     screen: ContentList
   },
-  Description: {
-    screen: Description
+  DetailPage: {
+    screen: DetailPage
   }
 },
 {
