@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import { BASE_URL } from '../constants/generalConstants';
+import SPELLS_LIST from '../constants/spellsList';
 import {styles} from '../styles/PagStyles';
 
 class ContentList extends Component {
@@ -18,7 +19,11 @@ class ContentList extends Component {
   }
 
   componentDidMount() {
-    this.fetchData();
+    if (this.state.pageInfo.option == "Spells") {
+      this.setState({ lists: SPELLS_LIST });
+    } else {
+      this.fetchData();
+    }
     // Used to change the header title dynamically.
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
@@ -29,7 +34,6 @@ class ContentList extends Component {
     const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ lists: json.results });
-    // console.log('################### this.state.lists: ' + JSON.stringify(this.state.lists))
   };
 
   _renderItem = ({item}) => {

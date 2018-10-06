@@ -8,6 +8,11 @@ const MENU_ITENS = [
         "option": "Races",
         "endpoint": "/races/",
         "screen": "ContentList"
+    },
+    {
+        "option": "Spells",
+        "endpoint": "/spells/",
+        "screen": "ContentList"
     }
 ]
 
