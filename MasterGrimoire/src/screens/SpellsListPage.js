@@ -1,45 +1,36 @@
 import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
-import { BASE_URL } from '../constants/generalConstants';
+import SPELLS_DETAILS from '../constants/spellsDetails';
 import {styles} from '../styles/PagStyles';
 
-class ContentList extends Component {
+class SpellsListPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      lists: [],
+      lists: SPELLS_DETAILS,
       pageInfo: [],
     };
   }
+
   componentWillMount(){
     const { option } = this.props.navigation.state.params
     this.setState({ pageInfo: option })
   }
 
   componentDidMount() {
-    this.fetchData();
     // Used to change the header title dynamically.
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
   }
 
-  fetchData = async () => {
-    const endpoint = this.state.pageInfo.endpoint
-    const response = await fetch(`${BASE_URL}${endpoint}`);
-    const json = await response.json();
-    this.setState({ lists: json.results });
-  };
-
   _renderItem = ({item}) => {
     return  (
-
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
           <Text style={styles.content}>
             {item.name}
           </Text>
       </TouchableOpacity>
-
     )
   }
 
@@ -79,4 +70,4 @@ class ContentList extends Component {
   }
 }
 
-export default ContentList;
+export default SpellsListPage;

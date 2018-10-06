@@ -14,8 +14,8 @@ const MENU_ITENS = [
     {
         "option": "Spells",
         "endpoint": "/spells/",
-        "listScreen": "ContentList",
-        "detailScreen": "SpellsDetailPage"
+        "listScreen": "SpellsListPage",
+        "detailScreen": "DetailPage"
     }
 ]
 

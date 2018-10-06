@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import ContentList from './src/screens/ContentList';
 import MainScreen from './src/screens/MainScreen';
 import DetailPage from './src/screens/DetailPage';
-import SpellsDetailPage from './src/screens/SpellsDetailPage';
+import SpellsListPage from './src/screens/SpellsListPage';
 
 const App = createStackNavigator({
   MainScreen: {
@@ -16,8 +16,8 @@ const App = createStackNavigator({
   DetailPage: {
     screen: DetailPage
   },
-  SpellsDetailPage: {
-    screen: SpellsDetailPage
+  SpellsListPage: {
+    screen: SpellsListPage
   }
 },
 {
