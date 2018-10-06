@@ -49,7 +49,8 @@ class ContentList extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate('DetailPage', {detailArg : {item : item, pageInfo : this.state.pageInfo } })
+    this.props.navigation.navigate(this.state.pageInfo.detailScreen, 
+      { detailArg : { item : item, pageInfo : this.state.pageInfo } })
   }
 
   static navigationOptions = ({ navigation }) => {
