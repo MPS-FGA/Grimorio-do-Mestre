@@ -29,6 +29,7 @@ class ContentList extends Component {
     const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ lists: json.results });
+    // console.log('################### this.state.lists: ' + JSON.stringify(this.state.lists))
   };
 
   _renderItem = ({item}) => {
@@ -44,7 +45,7 @@ class ContentList extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate('Description', {hero: item})
+    this.props.navigation.navigate('DetailPage', {detailArg : {item : item, pageInfo : this.state.pageInfo } })
   }
 
   static navigationOptions = ({ navigation }) => {
