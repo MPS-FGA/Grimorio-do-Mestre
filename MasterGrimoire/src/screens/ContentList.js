@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import { BASE_URL } from '../constants/generalConstants';
 import {styles} from '../styles/PagStyles';
+import { Card } from 'react-native-elements'
 
 class ContentList extends Component {
   constructor(props) {
@@ -35,11 +36,13 @@ class ContentList extends Component {
   _renderItem = ({item}) => {
     return  (
 
-      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
-          <Text style={styles.content}>
-            {item.name}
+      <Card >
+        <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+          <Text style={styles.contentCard}>
+              {item.name}
           </Text>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </Card>
 
     )
   }

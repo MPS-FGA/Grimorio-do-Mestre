@@ -20,6 +20,11 @@ export const styles = StyleSheet.create({
     color :'white'
   },
 
+  contentCard: {
+    marginLeft: 10,
+    fontSize: 20,
+    color :'black'
+  },
   separator: {
     height:1,
     backgroundColor: '#4B0077'
