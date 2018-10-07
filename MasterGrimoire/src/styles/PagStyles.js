@@ -23,5 +23,11 @@ export const styles = StyleSheet.create({
   separator: {
     height:1,
     backgroundColor: '#4B0077'
-  }
+  },
+
+  picker: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#ffffff'
+  },
 });

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
+import { TouchableOpacity, FlatList, StyleSheet, Text, View, Picker } from "react-native";
 import SPELLS_DETAILS from '../constants/spellsDetails';
+import { SPELLS_PICKER_FILTERS } from '../constants/generalConstants';
 import {styles} from '../styles/PagStyles';
 
 class SpellsListPage extends Component {
@@ -8,9 +9,9 @@ class SpellsListPage extends Component {
     super(props);
 
     this.state = {
-      completeList: SPELLS_DETAILS,
-      filteredList: SPELLS_DETAILS,
+      spellsList: SPELLS_DETAILS,
       pageInfo: [],
+      pickerValues: SPELLS_PICKER_FILTERS,
     };
   }
 
@@ -31,10 +32,10 @@ class SpellsListPage extends Component {
   }
 
   // filterSpells(){
-  //   const data = this.state.completeList
+  //   const data = this.state.spellsList
   //   filterBy = { level: [1], casting_time: ["1 action"] },
   //   result = data.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
-  //   this.setState({ filteredList: result })
+  //   this.setState({ spellsList: result })
   //   console.log(result.length)
 
   //   result2 = result.filter(x => x.classes.some(e => e.name == 'Sorcerer'))
@@ -43,7 +44,7 @@ class SpellsListPage extends Component {
 
   // TODO - Implement pickers to get the filters
   filterSpells(casting_time, level, classes){
-    result = this.state.completeList
+    result = this.state.spellsList
     console.log('FIRST - ' + result.length)
     
     if (casting_time != null) {
@@ -63,7 +64,7 @@ class SpellsListPage extends Component {
     }
 
     console.log('END - ' + result.length)
-    this.setState({ filteredList: result })
+    this.setState({ spellsList: result })
   }
 
   _renderItem = ({item}) => {
@@ -99,8 +100,37 @@ class SpellsListPage extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Picker
+          style={{width: '80%', backgroundColor: '#ffffff'}}
+          selectedValue={this.state.pickerValues.spell_level}
+          onValueChange={(itemValue, itemIndex) => this.setState({ pickerValues: itemValue })}>
+          <Picker.Item label="Select a option" value="" />
+          <Picker.Item label="HTML" value="html" />
+          <Picker.Item label="JavaScript" value="js" />
+        </Picker>
+
+        <Picker
+          style={{width: '80%', backgroundColor: '#ffffff'}}
+          selectedValue={this.state.pickerValues.level}
+          onValueChange={(itemValue, itemIndex) => this.setState({ pickerValues: itemValue })}>
+          <Picker.Item label="Select a option" value="" />
+          <Picker.Item label="var" value="var" />
+          <Picker.Item label="let" value="let" />
+        </Picker>
+
+        <Picker
+          style={{width: '80%', backgroundColor: '#ffffff'}}
+          selectedValue={this.state.pickerValues.casting_time}
+          onValueChange={(itemValue, itemIndex) => this.setState(
+            { casting_time: itemValue }
+            )}>
+          <Picker.Item label="Select a option" value="" />
+          <Picker.Item label="var" value="var" />
+          <Picker.Item label="let" value="let" />
+        </Picker>
+
         <FlatList
-          data={this.state.filteredList}
+          data={this.state.spellsList}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
