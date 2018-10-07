@@ -23,15 +23,47 @@ class SpellsListPage extends Component {
     // Used to change the header title dynamically.
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
-    this.filter_spells()
+
+    // Just testing...
+    const cast = "1 action"
+    const level = 1
+    this.filterSpells(cast, level)
   }
 
-  filter_spells(){
-    const data = this.state.completeList
-    filterBy = { level: [1], casting_time: ["1 action", "10 minutes"], ritual: ["no"] },
-    result = data.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
+  // filterSpells(){
+  //   const data = this.state.completeList
+  //   filterBy = { level: [1], casting_time: ["1 action"] },
+  //   result = data.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
+  //   this.setState({ filteredList: result })
+  //   console.log(result.length)
+
+  //   result2 = result.filter(x => x.classes.some(e => e.name == 'Sorcerer'))
+  //   console.log(result2.length)
+  // }
+
+  // TODO - Implement pickers to get the filters
+  filterSpells(casting_time, level, classes){
+    result = this.state.completeList
+    console.log('FIRST - ' + result.length)
+    
+    if (casting_time != null) {
+      result = result.filter(x => x.casting_time == casting_time)
+      console.log('CASTING DIFERENT NULL - ' + result.length)
+    }
+
+    if (level != null) {
+      result = result.filter(x => x.level == level)
+      console.log('LEVEL DIFERENT NULL - ' + result.length)
+    }
+
+    if (classes != null) {
+      console.log('CLASSES DIFERENT NULL ' + result.length)
+    } else {
+      console.log('CLASSES IS NULL ' + result.length)
+    }
+
+    console.log('END - ' + result.length)
     this.setState({ filteredList: result })
-    console.log(result.length);
   }
 
   _renderItem = ({item}) => {
