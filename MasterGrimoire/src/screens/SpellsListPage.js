@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View, Picker } from "react-native";
+import { 
+  TouchableOpacity, 
+  FlatList, 
+  Button, 
+  Text, 
+  View, 
+  Picker } from "react-native";
 import SPELLS_DETAILS from '../constants/spellsDetails';
 import { SPELLS_PICKER_FILTERS } from '../constants/generalConstants';
 import {styles} from '../styles/PagStyles';
@@ -24,12 +30,6 @@ class SpellsListPage extends Component {
     // Used to change the header title dynamically.
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
-
-    // Just testing...
-    console.log('##### OPTIONS: ' + JSON.stringify(this.state.pickerValues))
-    const cast = "1 action"
-    const level = 1
-    this.filterSpells(cast, level)
   }
 
   // filterSpells(){
@@ -44,28 +44,14 @@ class SpellsListPage extends Component {
   // }
 
   // TODO - Implement pickers to get the filters
-  filterSpells(casting_time, level, classes){
-    result = this.state.spellsList
-    console.log('FIRST - ' + result.length)
-    
-    if (casting_time != null) {
-      result = result.filter(x => x.casting_time == casting_time)
-      console.log('CASTING DIFERENT NULL - ' + result.length)
-    }
+  _filterSpells = () => {
+    result = this.state.pickerValues
+    console.log('####### RESULT: ' + JSON.stringify(result))
+  }
 
-    if (level != null) {
-      result = result.filter(x => x.level == level)
-      console.log('LEVEL DIFERENT NULL - ' + result.length)
-    }
-
-    if (classes != null) {
-      console.log('CLASSES DIFERENT NULL ' + result.length)
-    } else {
-      console.log('CLASSES IS NULL ' + result.length)
-    }
-
-    console.log('END - ' + result.length)
-    this.setState({ spellsList: result })
+  _resetFilters = () => {
+    this.setState({ spellsList: SPELLS_DETAILS })
+    this.setState({ pickerValues: SPELLS_PICKER_FILTERS })
   }
 
   _renderItem = ({item}) => {
@@ -153,6 +139,20 @@ class SpellsListPage extends Component {
           <Picker.Item label="Warlock" value="Warlock" />
           <Picker.Item label="Wizard" value="Wizard" />
         </Picker>
+
+        <Button
+          onPress={this._filterSpells}
+          title="Filter"
+          color="#841584"
+          accessibilityLabel="Filter Spells"
+        />
+
+        <Button
+          onPress={this._resetFilters}
+          title="Reset Filters"
+          color="#841584"
+          accessibilityLabel="Reset Filters"
+        />
 
         <FlatList
           data={this.state.spellsList}
