@@ -38,12 +38,16 @@ class ContentList extends Component {
 
       <Card >
         <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+          <Text style={styles.contentCardTitle}>
+              {item.name}{'\n'}{'\n'}
+          </Text>
           <Text style={styles.contentCard}>
-              {item.name}
+            <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Dice:</Text> 1d12 per barbarian level.{'\n'}{'\n'}
+              <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Points at 1st Level:</Text> 12 + your Constitution modifier.{'\n'}{'\n'}
+              <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Points at Higher Levels:</Text> 1d12 (or 7) + your Constitution modifier per barbarian level after 1st.{'\n'}{'\n'}
           </Text>
         </TouchableOpacity>
       </Card>
-
     )
   }
 
@@ -74,7 +78,7 @@ class ContentList extends Component {
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
-            <View style={styles.separator} />
+            <View style={styles.separatorCard} />
           }
         />
       </View>
