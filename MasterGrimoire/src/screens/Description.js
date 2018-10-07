@@ -43,6 +43,7 @@ class Description extends Component {
               <Text style={{fontSize:22,fontWeight:'bold'}}>Saving Throws:</Text> Strength, Constitution.{'\n'}{'\n'}
               <Text style={{fontSize:22,fontWeight:'bold'}}>Skills:</Text> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival.{'\n'}{'\n'}
         </Text>
+
       </View>
     </ScrollView>
 
