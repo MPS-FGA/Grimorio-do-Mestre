@@ -45,10 +45,29 @@ class SpellsListPage extends Component {
 
   // TODO - Implement pickers to get the filters
   _filterSpells = () => {
-    result = this.state.pickerValues
-    console.log('####### RESULT: ' + JSON.stringify(result))
+    result = SPELLS_DETAILS
+    filters = this.state.pickerValues
+
+    console.log('AEEEEEE!!!!!: ' + result.length)
+    if (filters.spellLevel != ""){
+      result = result.filter(x => x.level == filters.spellLevel)
+      console.log('Spell Level: ' + result.length)
+    }
+
+    if (filters.castingTime != ""){
+      result = result.filter(x => x.casting_time == filters.castingTime)
+      console.log('Casting Time: ' + result.length)
+    }
+
+    if (filters.class != ""){
+      result = result.filter(x => x.classes.some(e => e.name == filters.class))
+      console.log('Class: ' + result.length)
+    }
+    
+    this.setState({ spellsList: result })
   }
 
+  // To reset filters come back the state to initial state
   _resetFilters = () => {
     this.setState({ spellsList: SPELLS_DETAILS })
     this.setState({ pickerValues: SPELLS_PICKER_FILTERS })
