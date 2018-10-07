@@ -8,7 +8,8 @@ class SpellsListPage extends Component {
     super(props);
 
     this.state = {
-      lists: SPELLS_DETAILS,
+      completeList: SPELLS_DETAILS,
+      filteredList: SPELLS_DETAILS,
       pageInfo: [],
     };
   }
@@ -22,6 +23,15 @@ class SpellsListPage extends Component {
     // Used to change the header title dynamically.
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
+    this.filter_spells()
+  }
+
+  filter_spells(){
+    const data = this.state.completeList
+    filterBy = { level: [1], casting_time: ["1 action", "10 minutes"], ritual: ["no"] },
+    result = data.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
+    this.setState({ filteredList: result })
+    console.log(result.length);
   }
 
   _renderItem = ({item}) => {
@@ -35,7 +45,7 @@ class SpellsListPage extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate(this.state.pageInfo.detailScreen, 
+    this.props.navigation.navigate("DetailPage", 
       { detailArg : { item : item, pageInfo : this.state.pageInfo } })
   }
 
@@ -58,7 +68,7 @@ class SpellsListPage extends Component {
     return (
       <View style={styles.container}>
         <FlatList
-          data={this.state.lists}
+          data={this.state.filteredList}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>

@@ -16,7 +16,6 @@ class DetailPage extends Component {
     const { detailArg } = this.props.navigation.state.params
     this.setState({ pageInfo: detailArg.pageInfo })
     this.setState({ item: detailArg.item })
-    console.log('######### Details: ' + JSON.stringify(detailArg.item))
   }
 
   componentDidMount(){
