@@ -5,15 +5,14 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#AAA3B2',
+    backgroundColor: '#FDFCFF',
   },
 
   contentCardTitle :{
     fontSize:40,
     fontWeight: 'bold',
-    marginLeft: 10,
+    textAlign: "center",
     color :'black',
-    marginTop: -70,
   },
 
   buttons: {
@@ -25,7 +24,7 @@ export const styles = StyleSheet.create({
   content: {
     marginLeft: 10,
     fontSize: 20,
-    color :'white'
+    color :'black'
   },
 
   contentCard: {
@@ -34,6 +33,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     color :'black'
   },
+
   separator: {
     height:1,
     backgroundColor: '#4B0077'

@@ -30,24 +30,22 @@ class ContentList extends Component {
     const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ lists: json.results });
-    // console.log('################### this.state.lists: ' + JSON.stringify(this.state.lists))
   };
 
   _renderItem = ({item}) => {
     return  (
-
-      <Card >
-        <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
-          <Text style={styles.contentCardTitle}>
-              {item.name}{'\n'}{'\n'}
-          </Text>
-          <Text style={styles.contentCard}>
-            <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Dice:</Text> 1d12 per barbarian level.{'\n'}{'\n'}
-              <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Points at 1st Level:</Text> 12 + your Constitution modifier.{'\n'}{'\n'}
-              <Text style={{fontSize:12,fontWeight:'bold'}}>Hit Points at Higher Levels:</Text> 1d12 (or 7) + your Constitution modifier per barbarian level after 1st.{'\n'}{'\n'}
-          </Text>
-        </TouchableOpacity>
-      </Card>
+      <Card containerStyle={{width: '100%', marginLeft: 0}}>
+          <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+          <View style={{marginTop:-70}}>
+            <Text style={styles.contentCardTitle}>
+                {item.name}{'\n'}{'\n'}
+            </Text>
+          </View>
+            <View style={{marginTop:70,marginLeft:-200}}>
+                /*Put here the resume contents*/
+            </View>
+      </TouchableOpacity>
+    </Card>
     )
   }
 
@@ -72,7 +70,6 @@ class ContentList extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
         <FlatList
           data={this.state.lists}
           renderItem={this._renderItem}
@@ -81,7 +78,6 @@ class ContentList extends Component {
             <View style={styles.separatorCard} />
           }
         />
-      </View>
     );
   }
 }
