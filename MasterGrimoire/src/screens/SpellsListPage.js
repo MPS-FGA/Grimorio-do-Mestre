@@ -26,6 +26,7 @@ class SpellsListPage extends Component {
     this.props.navigation.setParams({title: title})
 
     // Just testing...
+    console.log('##### OPTIONS: ' + JSON.stringify(this.state.pickerValues))
     const cast = "1 action"
     const level = 1
     this.filterSpells(cast, level)
@@ -102,31 +103,55 @@ class SpellsListPage extends Component {
       <View style={styles.container}>
         <Picker
           style={{width: '80%', backgroundColor: '#ffffff'}}
-          selectedValue={this.state.pickerValues.spell_level}
-          onValueChange={(itemValue, itemIndex) => this.setState({ pickerValues: itemValue })}>
-          <Picker.Item label="Select a option" value="" />
-          <Picker.Item label="HTML" value="html" />
-          <Picker.Item label="JavaScript" value="js" />
+          selectedValue={this.state.pickerValues.spellLevel}
+          onValueChange={(itemValue, itemIndex) => this.setState({
+            pickerValues: { ...this.state.pickerValues, spellLevel: itemValue }})
+          }>
+          <Picker.Item label="Select a Spell Level" value="" />
+          <Picker.Item label="Level 1" value="1" />
+          <Picker.Item label="Level 2" value="2" />
+          <Picker.Item label="Level 3" value="3" />
+          <Picker.Item label="Level 4" value="4" />
+          <Picker.Item label="Level 5" value="5" />
+          <Picker.Item label="Level 6" value="6" />
+          <Picker.Item label="Level 7" value="7" />
+          <Picker.Item label="Level 8" value="8" />
+          <Picker.Item label="Level 9" value="9" />
         </Picker>
 
         <Picker
           style={{width: '80%', backgroundColor: '#ffffff'}}
-          selectedValue={this.state.pickerValues.level}
-          onValueChange={(itemValue, itemIndex) => this.setState({ pickerValues: itemValue })}>
-          <Picker.Item label="Select a option" value="" />
-          <Picker.Item label="var" value="var" />
-          <Picker.Item label="let" value="let" />
+          selectedValue={this.state.pickerValues.castingTime}
+          onValueChange={(itemValue, itemIndex) => this.setState({
+            pickerValues: { ...this.state.pickerValues, castingTime: itemValue }})
+            }>
+          <Picker.Item label="Select the Casting Time" value="" />
+          <Picker.Item label="1 Action" value="1 action" />
+          <Picker.Item label="1 Bonus Action" value="1 bonus action" />
+          <Picker.Item label="1 Reaction" value="1 reaction" />
+          <Picker.Item label="1 Minute" value="1 minute" />
+          <Picker.Item label="10 Minutes" value="10 minutes" />
+          <Picker.Item label="1 Hour" value="1 hour" />
+          <Picker.Item label="8 Hours" value="8 hours" />
+          <Picker.Item label="12 Hours" value="12 hours" />
+          <Picker.Item label="24 Hours" value="24 hours" />
         </Picker>
 
         <Picker
           style={{width: '80%', backgroundColor: '#ffffff'}}
-          selectedValue={this.state.pickerValues.casting_time}
-          onValueChange={(itemValue, itemIndex) => this.setState(
-            { casting_time: itemValue }
-            )}>
-          <Picker.Item label="Select a option" value="" />
-          <Picker.Item label="var" value="var" />
-          <Picker.Item label="let" value="let" />
+          selectedValue={this.state.pickerValues.class}
+          onValueChange={(itemValue, itemIndex) => this.setState({
+            pickerValues: { ...this.state.pickerValues, class: itemValue }})
+          }>
+          <Picker.Item label="Select the Class" value="" />
+          <Picker.Item label="Bard" value="Bard" />
+          <Picker.Item label="Cleric" value="Cleric" />
+          <Picker.Item label="Druid" value="Druid" />
+          <Picker.Item label="Paladin" value="Paladin" />
+          <Picker.Item label="Ranger" value="Ranger" />
+          <Picker.Item label="Sorcerer" value="Sorcerer" />
+          <Picker.Item label="Warlock" value="Warlock" />
+          <Picker.Item label="Wizard" value="Wizard" />
         </Picker>
 
         <FlatList
