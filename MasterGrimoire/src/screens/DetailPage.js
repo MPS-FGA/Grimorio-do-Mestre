@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Text, View, FlatList, ScrollView} from "react-native";
+import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
 
 class DetailPage extends Component {
   constructor(props) {
@@ -9,6 +9,7 @@ class DetailPage extends Component {
       pageInfo: [],
       item: [],
       rawJson: [],
+      isLoading : false
     };
   }
 
@@ -26,9 +27,11 @@ class DetailPage extends Component {
   }
 
   fetchData = async () => {
+    this.setState({isLoading: true});
     const response = await fetch(this.state.item.url);
     const json = await response.json();
     this.setState({ rawJson: json });
+    this.setState({isLoading: false});
   };
 
 
@@ -171,11 +174,22 @@ class DetailPage extends Component {
     )
   }
 
+  _renderContext(){
+    if(this.state.isLoading == true){
+      return (
+          <ActivityIndicator size="large" color="#0000ff" />
+      )
+    }else{
+      return (
+          this._renderDetail()  
+      )
+    }
+  }
 
   render() {
       return(
         <ScrollView >
-          {this._renderDetail()}
+          {this._renderContext()}
         </ScrollView>
       )
   }
