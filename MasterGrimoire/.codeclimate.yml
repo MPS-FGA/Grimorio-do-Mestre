@@ -5,4 +5,4 @@ plugins:
       config: path/to/.eslintrc
     checks:
       complexity:
-        enabled: false
+        enabled: true
