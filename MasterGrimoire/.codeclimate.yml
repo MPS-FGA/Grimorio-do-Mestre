@@ -1,6 +1,8 @@
 plugins:
   eslint:
     enabled: true
+    config:
+      config: path/to/.eslintrc
     checks:
       complexity:
         enabled: false
