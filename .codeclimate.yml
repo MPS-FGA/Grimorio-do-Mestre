@@ -4,8 +4,3 @@ plugins:
     channel: "eslint-4"
     config:
       config: .eslintrc.json
-      extensions:
-        - .js
-    checks:
-      complexity:
-        enabled: true
