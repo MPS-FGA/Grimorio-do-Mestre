@@ -5,7 +5,8 @@ import {
   Button, 
   Text, 
   View, 
-  Picker } from "react-native";
+  Picker,
+  TextInput } from "react-native";
 import SPELLS_DETAILS from '../constants/spellsDetails';
 import { SPELLS_PICKER_FILTERS } from '../constants/generalConstants';
 import {styles} from '../styles/PagStyles';
@@ -31,24 +32,21 @@ class SpellsListPage extends Component {
     const title = this.state.pageInfo.option
     this.props.navigation.setParams({title: title})
   }
+  
+  _filterByName = (value) => {
+    result = SPELLS_DETAILS
+    inputText = value
+    this.setState({ pickerValues: { ...this.state.pickerValues, spellName: inputText }})
 
-  // filterSpells(){
-  //   const data = this.state.spellsList
-  //   filterBy = { level: [1], casting_time: ["1 action"] },
-  //   result = data.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
-  //   this.setState({ spellsList: result })
-  //   console.log(result.length)
+    result = result.filter(x => x.name.toLowerCase().includes(inputText.toLowerCase()))
 
-  //   result2 = result.filter(x => x.classes.some(e => e.name == 'Sorcerer'))
-  //   console.log(result2.length)
-  // }
+    this.setState({ spellsList: result })
+ }
 
-  // TODO - Implement pickers to get the filters
-  _filterSpells = () => {
+  _filterByPickers = () => {
     result = SPELLS_DETAILS
     filters = this.state.pickerValues
 
-    console.log('AEEEEEE!!!!!: ' + result.length)
     if (filters.spellLevel != ""){
       result = result.filter(x => x.level == filters.spellLevel)
       console.log('Spell Level: ' + result.length)
@@ -106,6 +104,12 @@ class SpellsListPage extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <TextInput
+            style={{marginTop: 20, width: '80%', backgroundColor: '#ffffff'}}
+            value={this.state.pickerValues.spellName}
+            onChangeText={this._filterByName}
+          />
+        
         <Picker
           style={{width: '80%', backgroundColor: '#ffffff'}}
           selectedValue={this.state.pickerValues.spellLevel}
@@ -160,7 +164,7 @@ class SpellsListPage extends Component {
         </Picker>
 
         <Button
-          onPress={this._filterSpells}
+          onPress={this._filterByPickers}
           title="Filter"
           color="#841584"
           accessibilityLabel="Filter Spells"
