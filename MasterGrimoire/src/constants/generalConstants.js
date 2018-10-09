@@ -6,5 +6,7 @@ export const SPELLS_PICKER_FILTERS = {
     "spellName": "",
     "spellLevel": "",
     "castingTime": "",
-    "class": ""
+    "class": "",
+    "school": "",
+    "ritual": ""
 }

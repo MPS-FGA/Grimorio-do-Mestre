@@ -35,11 +35,11 @@ class SpellsListPage extends Component {
   
   _filterByName = (value) => {
     result = SPELLS_DETAILS
+
     inputText = value
     this.setState({ pickerValues: { ...this.state.pickerValues, spellName: inputText }})
 
     result = result.filter(x => x.name.toLowerCase().includes(inputText.toLowerCase()))
-
     this.setState({ spellsList: result })
  }
 
@@ -60,6 +60,16 @@ class SpellsListPage extends Component {
     if (filters.class != ""){
       result = result.filter(x => x.classes.some(e => e.name == filters.class))
       console.log('Class: ' + result.length)
+    }
+
+    if (filters.school != ""){
+      result = result.filter(x => x.school.name.includes(filters.school))
+      console.log('School: ' + result.length)
+    }
+
+    if (filters.ritual != ""){
+      result = result.filter(x => x.ritual == filters.ritual)
+      console.log('Ritual: ' + result.length)
     }
     
     this.setState({ spellsList: result })
@@ -161,6 +171,34 @@ class SpellsListPage extends Component {
           <Picker.Item label="Sorcerer" value="Sorcerer" />
           <Picker.Item label="Warlock" value="Warlock" />
           <Picker.Item label="Wizard" value="Wizard" />
+        </Picker>
+
+        <Picker
+          style={{width: '80%', backgroundColor: '#ffffff'}}
+          selectedValue={this.state.pickerValues.school}
+          onValueChange={(itemValue, itemIndex) => this.setState({
+            pickerValues: { ...this.state.pickerValues, school: itemValue }})
+          }>
+          <Picker.Item label="Select the School" value="" />
+          <Picker.Item label="Abjuration" value="Abjuration" />
+          <Picker.Item label="Conjuration" value="Conjuration" />
+          <Picker.Item label="Divination" value="Divination" />
+          <Picker.Item label="Enchantment" value="Enchantment" />
+          <Picker.Item label="Evocation" value="Evocation" />
+          <Picker.Item label="Illusion" value="Illusion" />
+          <Picker.Item label="Necromancy" value="Necromancy" />
+          <Picker.Item label="Transmutation" value="Transmutation" />
+        </Picker>
+
+        <Picker
+          style={{width: '80%', backgroundColor: '#ffffff'}}
+          selectedValue={this.state.pickerValues.ritual}
+          onValueChange={(itemValue, itemIndex) => this.setState({
+            pickerValues: { ...this.state.pickerValues, ritual: itemValue }})
+          }>
+          <Picker.Item label="Ritual" value="" />
+          <Picker.Item label="Yes" value="yes" />
+          <Picker.Item label="No" value="no" />
         </Picker>
 
         <Button
