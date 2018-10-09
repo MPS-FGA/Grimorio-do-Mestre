@@ -111,6 +111,27 @@ class SpellsListPage extends Component {
     };
   };
 
+  _renderContext(){
+    if(this.state.spellsList.length == 0){
+      return (
+        <Text style={{color: '#FFFFFF'}}>
+          No Spells Found!
+        </Text>
+      )
+    }else{
+      return (
+        <FlatList
+          data={this.state.spellsList}
+          renderItem={this._renderItem}
+          keyExtractor = { (item, index) => index.toString() }
+          ItemSeparatorComponent={()=>
+            <View style={styles.separator} />
+          }
+        /> 
+      )
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -215,14 +236,8 @@ class SpellsListPage extends Component {
           accessibilityLabel="Reset Filters"
         />
 
-        <FlatList
-          data={this.state.spellsList}
-          renderItem={this._renderItem}
-          keyExtractor = { (item, index) => index.toString() }
-          ItemSeparatorComponent={()=>
-            <View style={styles.separator} />
-          }
-        />
+        {this._renderContext()}
+        
       </View>
     );
   }
