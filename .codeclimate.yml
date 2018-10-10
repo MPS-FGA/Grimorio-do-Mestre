@@ -1,8 +1,4 @@
 version: "2"
-prepare:
-  fetch:
-    - url: "https://raw.githubusercontent.com/example/example/master/rubocop.yml"
-      path: "alternate-rubocop-path.yml"
 checks:
   complex-logic:
     config:
