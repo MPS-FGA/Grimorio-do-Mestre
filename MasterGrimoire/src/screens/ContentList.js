@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
+import { TouchableOpacity, FlatList, StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { BASE_URL } from '../constants/generalConstants';
 import {styles} from '../styles/PagStyles';
 import { Card } from 'react-native-elements'
@@ -11,6 +11,7 @@ class ContentList extends Component {
     this.state = {
       lists: [],
       pageInfo: [],
+      isLoading: false,
     };
   }
   componentWillMount(){
@@ -26,10 +27,12 @@ class ContentList extends Component {
   }
 
   fetchData = async () => {
+    this.setState({isLoading: true});
     const endpoint = this.state.pageInfo.endpoint
     const response = await fetch(`${BASE_URL}${endpoint}`);
     const json = await response.json();
     this.setState({ lists: json.results });
+    this.setState({isLoading: false});
   };
 
   _renderItem = ({item}) => {
@@ -42,7 +45,6 @@ class ContentList extends Component {
             </Text>
           </View>
             <View style={{marginTop:70,marginLeft:-200}}>
-                /*Put here the resume contents*/
             </View>
       </TouchableOpacity>
     </Card>
@@ -55,7 +57,6 @@ class ContentList extends Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
-      // If it finds the title defined dynamically, uses it. If not, uses default message.
       title: navigation.getParam('title', 'Options Available'),
       headerStyle: {
         backgroundColor: '#8D6AB1',
@@ -68,16 +69,28 @@ class ContentList extends Component {
     };
   };
 
-  render() {
-    return (
+  _renderContext(){
+    if(this.state.isLoading == true){
+      return (
+          <ActivityIndicator size="large" color="#0000ff" />
+      )
+    }else{
+      return (
         <FlatList
           data={this.state.lists}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
-            <View style={styles.separatorCard} />
-          }
-        />
+          <View style={styles.separator} />
+          }/>
+      )
+    }
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        {this._renderContext()}
+      </View>
     );
   }
 }
