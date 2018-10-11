@@ -21,7 +21,7 @@ class MainScreen extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate(item.screen, {option: item})
+    this.props.navigation.navigate(item.listScreen, {option: item})
   }
 
   static navigationOptions = {

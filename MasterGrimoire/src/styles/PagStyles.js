@@ -38,9 +38,16 @@ export const styles = StyleSheet.create({
     height:1,
     backgroundColor: '#4B0077'
   },
+
   separatorCard: {
     marginTop:20,
     height:1,
     backgroundColor: '#4B0077'
+  },
+
+  picker: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#ffffff'
   }
 });
