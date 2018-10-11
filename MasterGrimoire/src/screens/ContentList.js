@@ -37,7 +37,7 @@ class ContentList extends Component {
 
   _renderItem = ({item}) => {
     return  (
-      <Card containerStyle={{width: '100%', marginLeft: 0}}>
+      <Card containerStyle={{width: 1000, marginLeft: 0}}>
           <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
           <View style={{marginTop:-70}}>
             <Text style={styles.contentCardTitle}>
