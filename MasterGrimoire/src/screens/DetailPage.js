@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
+import {styles} from '../styles/PagStyles';
 
 class DetailPage extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class DetailPage extends Component {
     const itemJson = this.state.rawJson;
 
     return(
-      <View style={styles.container}>
+      <View >
         <Text><Text>Speed</Text>: {itemJson.speed}</Text>
         <Text><Text>Alignment</Text>: {itemJson.alignment}</Text>
         <Text><Text>Age</Text>: {itemJson.age}</Text>
@@ -120,7 +121,8 @@ class DetailPage extends Component {
     itemJson = this.state.rawJson;
     return(
       <View>
-        <Text><Text  >Hit dice</Text>: {itemJson.hit_die}</Text>
+        <Text > Hit Points</Text >
+        <Text><Text  style={{fontSize:22,fontWeight:'bold'}}>Hit dice</Text>: {itemJson.hit_die}</Text>
         {(typeof itemJson.proficiencies !== 'undefined' && itemJson.proficiencies.length > 0) && (
             <View>
               <Text><Text>Proficiencies</Text>: </Text>
@@ -131,21 +133,21 @@ class DetailPage extends Component {
         {(typeof itemJson.proficiency_choices !== 'undefined'
           && typeof itemJson.proficiency_choices.from !== 'undefined' && itemJson.proficiency_choices.from.length > 0) && (
             <View>
-              <Text><Text >Proficiency choices</Text>:</Text>
-              <Text><Text>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
+              <Text><Text style={{fontSize:22,fontWeight:'bold'}} >Proficiency choices</Text>:</Text>
+              <Text><Text tyle={{fontSize:22,fontWeight:'bold'}}>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
               {this._renderlistAtribute(itemJson.proficiency_choices.from)}
             </View>
         )}
         {(typeof itemJson.saving_throws !== 'undefined' && itemJson.saving_throws.length > 0) && (
             <View>
-              <Text><Text>Saving Throws</Text>: </Text>
+              <Text><Text style={{fontSize:22,fontWeight:'bold'}}>Saving Throws</Text>: </Text>
               {this._renderlistAtribute(itemJson.saving_throws)}
             </View>
         )}
 
         {(typeof itemJson.subclasses !== 'undefined' && itemJson.subclasses.length > 0) && (
             <View>
-              <Text><Text>Subclasses</Text>: </Text>
+              <Text><Text style={{fontSize:22,fontWeight:'bold'}}>Subclasses</Text>: </Text>
               {this._renderlistAtribute(itemJson.subclasses)}
             </View>
         )}
