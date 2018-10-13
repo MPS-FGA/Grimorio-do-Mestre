@@ -76,44 +76,46 @@ class DetailPage extends Component {
 
     return(
       <View >
-        <Text style={{fontSize:40,
+        <Text style={{marginTop: 50,
+                      fontSize:40,
                       fontWeight: 'bold',
                       textAlign: "center"
-                    }}>Coisas</Text >
-        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Speed</Text>: {itemJson.speed}</Text>
-        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Alignment</Text>: {itemJson.alignment}</Text>
-        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Age</Text>: {itemJson.age}</Text>
-        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}> {itemJson.size} - {itemJson.size_description}</Text>
+                    }}>Description</Text >
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Speed</Text>{'\n'} {itemJson.speed}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Alignment</Text>{'\n'} {itemJson.alignment}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Age</Text>{'\n'} {itemJson.age}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}> {itemJson.size} - {itemJson.size_description}</Text>    </Text>
+
         {(typeof itemJson.starting_proficiencies !== 'undefined' && itemJson.starting_proficiencies.length > 0) && (
-            <View>
+            <View style ={{alignItems: "center"}}>
               <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Starting Proficiencies</Text>: </Text>
               {this._renderlistAtribute(itemJson.starting_proficiencies)}
             </View>
         )}
         {(typeof itemJson.starting_proficiency_options !== 'undefined'
           && typeof itemJson.starting_proficiency_options.from !== 'undefined' && itemJson.starting_proficiency_options.from.length > 0) && (
-            <View>
+            <View style ={{alignItems: "center"}}>
             <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Starting proficiency options</Text>:</Text>
             <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Can choose </Text>: {itemJson.starting_proficiency_options.choose}</Text>
               {this._renderlistAtribute(itemJson.starting_proficiency_options.from)}
             </View>
         )}
-        <Text><Text>Languages Description</Text>: {itemJson.language_desc}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Languages Description</Text>: {itemJson.language_desc}</Text>
         {(typeof itemJson.languages !== 'undefined' && itemJson.languages.length > 0) && (
-            <View>
+            <View style ={{alignItems: "center"}}>
               <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Languages</Text>: </Text>
               {this._renderlistAtribute(itemJson.languages)}
             </View>
         )}
         {(typeof itemJson.traits !== 'undefined' && itemJson.traits.length > 0) && (
-            <View>
+            <View style ={{alignItems: "center"}}>
             <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Traits</Text>: </Text>
               {this._renderlistAtribute(itemJson.traits)}
             </View>
         )}
-        <Text><Text>Ability bonuses</Text>: {itemJson.ability_bonuses}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Ability bonuses</Text>: {itemJson.ability_bonuses}</Text>
         {(typeof itemJson.subraces !== 'undefined' && itemJson.subraces.length > 0) && (
-            <View>
+            <View style ={{alignItems: "center"}}>
               <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Subraces</Text>: </Text>
               {this._renderlistAtribute(itemJson.subraces)}
             </View>
