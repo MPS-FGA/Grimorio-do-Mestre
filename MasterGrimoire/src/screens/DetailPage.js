@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
+import {Text, View, FlatList, ScrollView, ActivityIndicator, StyleSheet} from "react-native";
 import {styles} from '../styles/PagStyles';
+
+
 
 class DetailPage extends Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class DetailPage extends Component {
       isLoading : false
     };
   }
+
 
   componentWillMount(){
     const { detailArg } = this.props.navigation.state.params
@@ -73,41 +76,45 @@ class DetailPage extends Component {
 
     return(
       <View >
-        <Text><Text>Speed</Text>: {itemJson.speed}</Text>
-        <Text><Text>Alignment</Text>: {itemJson.alignment}</Text>
-        <Text><Text>Age</Text>: {itemJson.age}</Text>
-        <Text><Text>Size</Text>: {itemJson.size} - {itemJson.size_description}</Text>
+        <Text style={{fontSize:40,
+                      fontWeight: 'bold',
+                      textAlign: "center"
+                    }}>Coisas</Text >
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Speed</Text>: {itemJson.speed}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Alignment</Text>: {itemJson.alignment}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Age</Text>: {itemJson.age}</Text>
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}> {itemJson.size} - {itemJson.size_description}</Text>
         {(typeof itemJson.starting_proficiencies !== 'undefined' && itemJson.starting_proficiencies.length > 0) && (
             <View>
-              <Text><Text style={stylesDescription.title}>Starting Proficiencies</Text>: </Text>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Starting Proficiencies</Text>: </Text>
               {this._renderlistAtribute(itemJson.starting_proficiencies)}
             </View>
         )}
         {(typeof itemJson.starting_proficiency_options !== 'undefined'
           && typeof itemJson.starting_proficiency_options.from !== 'undefined' && itemJson.starting_proficiency_options.from.length > 0) && (
             <View>
-              <Text><Text>Starting proficiency options</Text>:</Text>
-              <Text><Text>Can choose </Text>: {itemJson.starting_proficiency_options.choose}</Text>
+            <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Starting proficiency options</Text>:</Text>
+            <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Can choose </Text>: {itemJson.starting_proficiency_options.choose}</Text>
               {this._renderlistAtribute(itemJson.starting_proficiency_options.from)}
             </View>
         )}
         <Text><Text>Languages Description</Text>: {itemJson.language_desc}</Text>
         {(typeof itemJson.languages !== 'undefined' && itemJson.languages.length > 0) && (
             <View>
-              <Text><Text>Languages</Text>: </Text>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Languages</Text>: </Text>
               {this._renderlistAtribute(itemJson.languages)}
             </View>
         )}
         {(typeof itemJson.traits !== 'undefined' && itemJson.traits.length > 0) && (
             <View>
-              <Text><Text>Traits</Text>: </Text>
+            <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Traits</Text>: </Text>
               {this._renderlistAtribute(itemJson.traits)}
             </View>
         )}
         <Text><Text>Ability bonuses</Text>: {itemJson.ability_bonuses}</Text>
         {(typeof itemJson.subraces !== 'undefined' && itemJson.subraces.length > 0) && (
             <View>
-              <Text><Text>Subraces</Text>: </Text>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Subraces</Text>: </Text>
               {this._renderlistAtribute(itemJson.subraces)}
             </View>
         )}
@@ -121,33 +128,37 @@ class DetailPage extends Component {
     itemJson = this.state.rawJson;
     return(
       <View>
-        <Text > Hit Points</Text >
-        <Text><Text  style={{fontSize:22,fontWeight:'bold'}}>Hit dice</Text>: {itemJson.hit_die}</Text>
+        <Text style={{marginTop: 50,
+                      fontSize:40,
+                      fontWeight: 'bold',
+                      textAlign: "center"
+                      }}> Hit Points</Text >
+        <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Hit dice:</Text> {itemJson.hit_die}</Text>
         {(typeof itemJson.proficiencies !== 'undefined' && itemJson.proficiencies.length > 0) && (
-            <View>
-              <Text><Text>Proficiencies</Text>: </Text>
+            <View style ={{alignItems: "center"}}>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Proficiencies</Text>:</Text>
               {this._renderlistAtribute(itemJson.proficiencies)}
             </View>
         )}
 
         {(typeof itemJson.proficiency_choices !== 'undefined'
           && typeof itemJson.proficiency_choices.from !== 'undefined' && itemJson.proficiency_choices.from.length > 0) && (
-            <View>
-              <Text><Text style={{fontSize:22,fontWeight:'bold'}} >Proficiency choices</Text>:</Text>
-              <Text><Text tyle={{fontSize:22,fontWeight:'bold'}}>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
+            <View style ={{alignItems: "center"}}>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold',textAlign: "center"}} >Proficiency choices</Text>:</Text>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold',textAlign: "center"}}>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
               {this._renderlistAtribute(itemJson.proficiency_choices.from)}
             </View>
         )}
         {(typeof itemJson.saving_throws !== 'undefined' && itemJson.saving_throws.length > 0) && (
-            <View>
-              <Text><Text style={{fontSize:22,fontWeight:'bold'}}>Saving Throws</Text>: </Text>
+            <View style ={{alignItems: "center"}}>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Saving Throws</Text>: </Text>
               {this._renderlistAtribute(itemJson.saving_throws)}
             </View>
         )}
 
         {(typeof itemJson.subclasses !== 'undefined' && itemJson.subclasses.length > 0) && (
-            <View>
-              <Text><Text style={{fontSize:22,fontWeight:'bold'}}>Subclasses</Text>: </Text>
+            <View style ={{alignItems: "center"}}>
+              <Text style={{textAlign: "center"}}><Text style={{fontSize:22,fontWeight:'bold'}}>Subclasses</Text>: </Text>
               {this._renderlistAtribute(itemJson.subclasses)}
             </View>
         )}
