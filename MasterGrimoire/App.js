@@ -1,29 +1,52 @@
 import React from 'react';
 import { StatusBar, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import ContentList from './src/screens/ContentList';
+import ReferenceScreen from './src/screens/ReferenceScreen';
 import MainScreen from './src/screens/MainScreen';
 import DetailPage from './src/screens/DetailPage';
-import SpellsListPage from './src/screens/SpellsListPage';
+import { View, Text } from "react-native";
+import { Font } from 'expo';
 
-const App = createStackNavigator({
-  MainScreen: {
-    screen: MainScreen
+const RootStack = createStackNavigator(
+  {
+    MainScreen: {
+      screen: MainScreen
+    },
+    Reference: {
+      screen: ReferenceScreen
+    },
+    DetailPage: {
+      screen: DetailPage
+    }
   },
-  ContentList: {
-    screen: ContentList
-  },
-  DetailPage: {
-    screen: DetailPage
-  },
-  SpellsListPage: {
-    screen: SpellsListPage
+  {
+    cardStyle: {
+      paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
+    }
   }
-},
-{
-  cardStyle: {
-    paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
-  }
-})
+  );
 
-export default App;
+export default class App extends React.Component {
+  state = {
+    fontLoaded: false
+  };
+
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'koho-bold': require('./assets/fonts/KoHo-Bold.ttf'),
+      'vecna-bold': require('./assets/fonts/Vecna-Bold.otf'),
+    });
+
+    this.setState({ fontLoaded: true });
+  }
+
+
+  render(){
+    if (this.state.fontLoaded) {
+      return <RootStack />
+    } else {
+      return null
+    }
+  }
+}
