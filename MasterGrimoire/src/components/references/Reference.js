@@ -19,8 +19,12 @@ class Reference extends Component {
     this.state = {
       classes: CLASSES,
       races: RACES,
-      isLoading: false
+      referenceType: ""
     };
+  }
+
+  componentWillMount(){
+    this.setState({referenceType: this.props.referenceType})
   }
 
   _renderItem = ({item}) => {
@@ -34,21 +38,28 @@ class Reference extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate("DetailPage",
-      { detailArg : { item : item, pageInfo : [] } })
+    this.props.navigation.navigate("ReferenceDetailScreen",
+      { detailArg : { item : item, referenceType: this.props.referenceType} })
   }
 
   _renderContext(){
-    if(this.state.classes.length == 0){
+    let data = []
+    if (this.state.referenceType === "Classes") {
+      data = this.state.classes;
+    } else {
+      data = this.state.races;
+    }
+
+    if(data.length == 0){
       return (
         <Text style={{color: '#FFFFFF'}}>
-          No Races Found!
+          Data Found!
         </Text>
       )
     }else{
       return (
         <FlatList
-          data={this.state.classes}
+          data={data}
           renderItem={this._renderItem}
           keyExtractor = { (item, index) => index.toString() }
           ItemSeparatorComponent={()=>
@@ -61,7 +72,6 @@ class Reference extends Component {
 
 
   render() {
-    console.log(this.state);
     return (
       <View style={styles.subContainer}>
         {this._renderContext()}
