@@ -21,7 +21,6 @@ class MainScreen extends Component {
   }
 
   _onItemPress = (item) => {
-    console.log(item);
     this.props.navigation.navigate(item.screen, {option: item})
   }
 
