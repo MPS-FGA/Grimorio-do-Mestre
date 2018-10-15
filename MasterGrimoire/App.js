@@ -1,11 +1,11 @@
 import React from 'react';
+import { Font } from 'expo';
+import { View, Text } from "react-native";
 import { StatusBar, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import ReferenceScreen from './src/screens/ReferenceScreen';
 import MainScreen from './src/screens/MainScreen';
-import DetailPage from './src/screens/DetailPage';
-import { View, Text } from "react-native";
-import { Font } from 'expo';
+import ReferenceScreen from './src/screens/ReferenceScreen';
+import ReferenceDetailScreen from './src/screens/ReferenceDetailScreen';
 
 const RootStack = createStackNavigator(
   {
@@ -15,8 +15,8 @@ const RootStack = createStackNavigator(
     Reference: {
       screen: ReferenceScreen
     },
-    DetailPage: {
-      screen: DetailPage
+    ReferenceDetailScreen: {
+      screen: ReferenceDetailScreen
     }
   },
   {

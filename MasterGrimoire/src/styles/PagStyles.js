@@ -9,10 +9,8 @@ export const styles = StyleSheet.create({
   },
 
   subContainer: {
-    backgroundColor: 'green'
+    backgroundColor: 'green',
   },
-
-
 
   contentCardTitle :{
     fontSize:40,
