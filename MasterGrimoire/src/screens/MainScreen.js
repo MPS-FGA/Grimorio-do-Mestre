@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
+import { Image, TouchableOpacity, FlatList, StyleSheet, Text, View } from "react-native";
 import MENU_ITENS from '../constants/MenuItens';
 import { APP_NAME } from '../constants/General';
 import { styles } from '../styles/PagStyles';
@@ -20,6 +20,10 @@ class MainScreen extends Component {
   _renderItem = ({item}) => {
     return(
       <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+        <Image
+          style={styles.menuLogos}
+          source={{uri: item.icon}}
+        />
         <Text style={styles.content}>
           {item.title}
         </Text>

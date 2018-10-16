@@ -1,15 +1,18 @@
 const MENU_ITENS = [
     {
-        "title": "References",
-        "screen":"Reference"
+        "title": "Reference Guide",
+        "screen":"Reference",
+        "icon": "https://png.icons8.com/ios/50/000000/book-filled.png"
     },
     {
         "title": "Create custom itens",
-        "screen":"Custom"
+        "screen":"Custom",
+        "icon": "https://png.icons8.com/ios-glyphs/48/000000/maintenance.png"
     },
     {
         "title": "Manage campaigns",
-        "screen":"Campaign"
+        "screen":"Campaign",
+        "icon": "https://png.icons8.com/material/48/000000/battle.png"
     }
 
 

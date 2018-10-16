@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, FlatList, StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import { TouchableOpacity, TouchableHighlight, FlatList, StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { BASE_URL } from '../constants/General';
 import { styles } from '../styles/PagStyles';
 import { Card } from 'react-native-elements'
@@ -28,13 +28,27 @@ class ReferenceScreen extends Component {
     this.props.navigation.setParams({title: option.title})
   }
 
+  renderTab(name, page, isTabActive, onPressHandler, onLayoutHandler) {
+    return <TouchableHighlight
+      key={`${name}_${page}`}
+      onPress={() => onPressHandler(page)}
+      onLayout={onLayoutHandler}
+      style={styles.tabBar}
+      underlayColor="#4444"
+    >
+      <Text style={styles.tabBarText}>{name}</Text>
+    </TouchableHighlight>;
+  }
+
   render() {
     let navigation = this.props.navigation;
     return (
       <ScrollableTabView
-        style={{marginTop: 20, }}
         initialPage={0}
-        renderTabBar={() => <ScrollableTabBar />}
+        style={styles.tabBar}
+        tabBarTextStyle={styles.tabBarText}
+        tabBarUnderlineStyle={styles.tabBarUnderline}
+        renderTabBar={() => <ScrollableTabBar renderTab={this.renderTab}/>}
       >
         <Reference tabLabel='Classes' referenceType="Classes" navigation={navigation}/>
         <Reference tabLabel='Races' referenceType="Races" navigation={navigation}/>
