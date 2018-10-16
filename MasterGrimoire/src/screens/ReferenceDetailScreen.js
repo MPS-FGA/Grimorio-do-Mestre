@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
 import { styles } from '../styles/PagStyles';
+import Header from '../components/general/Header';
 
 class ReferenceDetailScreen extends Component {
   constructor(props) {
@@ -12,19 +13,19 @@ class ReferenceDetailScreen extends Component {
     };
   }
 
+  static navigationOptions = ({ navigation }) => {
+    let title = navigation.getParam('title', 'Options Available')
+    return {
+      header: <Header title={title} navigation={navigation}/>,
+    };
+  };
+
   componentWillMount(){
     const { detailArg } = this.props.navigation.state.params
     this.props.navigation.setParams({title: detailArg.item.name})
     this.setState({referenceType: detailArg.referenceType})
     this.setState({item: detailArg.item})
   }
-
-  static navigationOptions = ({ navigation }) => {
-    let title = navigation.getParam('title', 'Options Available')
-    return {
-      headerTitle: <Text style={ styles.headerTitle }>{title}</Text>,
-    };
-  };
 
   _renderDetail (){
     switch(this.state.referenceType) {

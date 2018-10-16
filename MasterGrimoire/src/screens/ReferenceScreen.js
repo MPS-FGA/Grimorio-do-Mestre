@@ -6,6 +6,7 @@ import { Card } from 'react-native-elements'
 import Reference from '../components/references/Reference'
 import Spells from '../components/references/Spells'
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
+import Header from '../components/general/Header';
 
 class ReferenceScreen extends Component {
   constructor(props) {
@@ -15,18 +16,17 @@ class ReferenceScreen extends Component {
     };
   }
 
+  static navigationOptions = ({ navigation }) => {
+    let title = navigation.getParam('title', 'Options Available')
+    return {
+      header: <Header title={title} navigation={navigation}/>,
+    };
+  };
+
   componentWillMount(){
     const { option } = this.props.navigation.state.params
     this.props.navigation.setParams({title: option.title})
   }
-
-
-  static navigationOptions = ({ navigation }) => {
-    let title = navigation.getParam('title', 'Options Available')
-    return {
-      headerTitle: <Text style={ styles.headerTitle }>{title}</Text>,
-    };
-  };
 
   render() {
     let navigation = this.props.navigation;

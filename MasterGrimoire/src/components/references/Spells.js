@@ -81,7 +81,7 @@ class Spells extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate("DetailPage",
+    this.props.navigation.navigate("ReferenceDetailScreen",
       { detailArg : { item : item, pageInfo : this.state.pageInfo } })
   }
 
