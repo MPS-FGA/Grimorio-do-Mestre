@@ -19,12 +19,12 @@ class MainScreen extends Component {
 
   _renderItem = ({item}) => {
     return(
-      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.buttons}>
+      <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.menuItem}>
         <Image
-          style={styles.menuLogos}
+          style={styles.menuIcon}
           source={{uri: item.icon}}
         />
-        <Text style={styles.content}>
+        <Text style={styles.menuItemTitle}>
           {item.title}
         </Text>
       </TouchableOpacity>

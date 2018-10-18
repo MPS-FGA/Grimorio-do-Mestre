@@ -3,7 +3,7 @@ import { TouchableOpacity, TouchableHighlight, FlatList, StyleSheet, Text, View,
 import { BASE_URL } from '../constants/General';
 import { styles } from '../styles/PagStyles';
 import { Card } from 'react-native-elements'
-import Reference from '../components/references/Reference'
+import ReferenceCard from '../components/references/ReferenceCard'
 import Spells from '../components/references/Spells'
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import Header from '../components/general/Header';
@@ -50,8 +50,8 @@ class ReferenceScreen extends Component {
         tabBarUnderlineStyle={styles.tabBarUnderline}
         renderTabBar={() => <ScrollableTabBar renderTab={this.renderTab}/>}
       >
-        <Reference tabLabel='Classes' referenceType="Classes" navigation={navigation}/>
-        <Reference tabLabel='Races' referenceType="Races" navigation={navigation}/>
+        <ReferenceCard tabLabel='Classes' referenceType="Classes" navigation={navigation}/>
+        <ReferenceCard tabLabel='Races' referenceType="Races" navigation={navigation}/>
         <Spells tabLabel='Spells' navigation={navigation} />
       </ScrollableTabView>
     )

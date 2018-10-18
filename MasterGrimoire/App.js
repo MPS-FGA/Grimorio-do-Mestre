@@ -34,7 +34,9 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
+      'koho': require('./assets/fonts/KoHo-Regular.ttf'),
       'koho-bold': require('./assets/fonts/KoHo-Bold.ttf'),
+      'vecna': require('./assets/fonts/Vecna.otf'),
       'vecna-bold': require('./assets/fonts/Vecna-Bold.otf'),
     });
 
