@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Text, View, FlatList, ScrollView} from "react-native";
+import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
 
 class DetailPage extends Component {
   constructor(props) {
@@ -9,6 +9,7 @@ class DetailPage extends Component {
       pageInfo: [],
       item: [],
       rawJson: [],
+      isLoading : false
     };
   }
 
@@ -26,9 +27,11 @@ class DetailPage extends Component {
   }
 
   fetchData = async () => {
+    this.setState({isLoading: true});
     const response = await fetch(this.state.item.url);
     const json = await response.json();
     this.setState({ rawJson: json });
+    this.setState({isLoading: false});
   };
 
 
@@ -37,9 +40,9 @@ class DetailPage extends Component {
       // If it finds the title defined dynamically, uses it. If not, uses default message.
       title: navigation.getParam('title', 'Options Available'),
       headerStyle: {
-        backgroundColor: '#000000',
+        backgroundColor: '#8D6AB1',
       },
-      headerTintColor: '#f00',
+      headerTintColor: '#ffffff',
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: 30,
@@ -68,14 +71,14 @@ class DetailPage extends Component {
     const itemJson = this.state.rawJson;
 
     return(
-      <View>
+      <View style={styles.container}>
         <Text><Text>Speed</Text>: {itemJson.speed}</Text>
         <Text><Text>Alignment</Text>: {itemJson.alignment}</Text>
         <Text><Text>Age</Text>: {itemJson.age}</Text>
         <Text><Text>Size</Text>: {itemJson.size} - {itemJson.size_description}</Text>
         {(typeof itemJson.starting_proficiencies !== 'undefined' && itemJson.starting_proficiencies.length > 0) && (
             <View>
-              <Text><Text>Starting Proficiencies</Text>: </Text>
+              <Text><Text style={stylesDescription.title}>Starting Proficiencies</Text>: </Text>
               {this._renderlistAtribute(itemJson.starting_proficiencies)}
             </View>
         )}
@@ -117,7 +120,7 @@ class DetailPage extends Component {
     itemJson = this.state.rawJson;
     return(
       <View>
-        <Text><Text>Hit dice</Text>: {itemJson.hit_die}</Text>
+        <Text><Text  >Hit dice</Text>: {itemJson.hit_die}</Text>
         {(typeof itemJson.proficiencies !== 'undefined' && itemJson.proficiencies.length > 0) && (
             <View>
               <Text><Text>Proficiencies</Text>: </Text>
@@ -128,7 +131,7 @@ class DetailPage extends Component {
         {(typeof itemJson.proficiency_choices !== 'undefined'
           && typeof itemJson.proficiency_choices.from !== 'undefined' && itemJson.proficiency_choices.from.length > 0) && (
             <View>
-              <Text><Text>Proficiency choices</Text>:</Text>
+              <Text><Text >Proficiency choices</Text>:</Text>
               <Text><Text>Can choose </Text>: {itemJson.proficiency_choices.choose}</Text>
               {this._renderlistAtribute(itemJson.proficiency_choices.from)}
             </View>
@@ -171,11 +174,22 @@ class DetailPage extends Component {
     )
   }
 
+  _renderContext(){
+    if(this.state.isLoading == true){
+      return (
+          <ActivityIndicator size="large" color="#0000ff" />
+      )
+    }else{
+      return (
+          this._renderDetail()
+      )
+    }
+  }
 
   render() {
       return(
         <ScrollView >
-          {this._renderDetail()}
+          {this._renderContext()}
         </ScrollView>
       )
   }
