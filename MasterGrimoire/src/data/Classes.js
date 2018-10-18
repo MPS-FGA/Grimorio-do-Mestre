@@ -59,11 +59,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "STR",
+				"name": "Strength",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/1"
 			},
 			{
-				"name": "CON",
+				"name": "Constitution",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/3"
 			}
 		],
@@ -244,11 +244,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "DEX",
+				"name": "Dexterity",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/2"
 			},
 			{
-				"name": "CHA",
+				"name": "Charisma",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
 			}
 		],
@@ -324,11 +324,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "WIS",
+				"name": "Wisdom",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
 			},
 			{
-				"name": "CHA",
+				"name": "Charisma",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
 			}
 		],
@@ -456,11 +456,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "INT",
+				"name": "Intelligence",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/4"
 			},
 			{
-				"name": "WIS",
+				"name": "Wisdom",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
 			}
 		],
@@ -548,11 +548,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "STR",
+				"name": "Strength",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/1"
 			},
 			{
-				"name": "CON",
+				"name": "Constitution",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/3"
 			}
 		],
@@ -751,11 +751,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "STR",
+				"name": "Strength",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/1"
 			},
 			{
-				"name": "DEX",
+				"name": "Dexterity",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/2"
 			}
 		],
@@ -834,11 +834,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "WIS",
+				"name": "Wisdom",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
 			},
 			{
-				"name": "CHA",
+				"name": "Charisma",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
 			}
 		],
@@ -930,11 +930,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "STR",
+				"name": "Strength",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/1"
 			},
 			{
-				"name": "DEX",
+				"name": "Dexterity",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/2"
 			}
 		],
@@ -1046,11 +1046,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "DEX",
+				"name": "Dexterity",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/2"
 			},
 			{
-				"name": "INT",
+				"name": "Intelligence",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/4"
 			}
 		],
@@ -1129,11 +1129,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "CON",
+				"name": "Constitution",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/3"
 			},
 			{
-				"name": "CHA",
+				"name": "Charisma",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
 			}
 		],
@@ -1209,11 +1209,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "WIS",
+				"name": "Wisdom",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
 			},
 			{
-				"name": "CHA",
+				"name": "Charisma",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
 			}
 		],
@@ -1293,11 +1293,11 @@ const CLASSES = [
 		],
 		"saving_throws": [
 			{
-				"name": "INT",
+				"name": "Intelligence",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/4"
 			},
 			{
-				"name": "WIS",
+				"name": "Wisdom",
 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
 			}
 		],
