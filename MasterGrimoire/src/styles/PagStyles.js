@@ -106,7 +106,7 @@ export const styles = StyleSheet.create({
   //ReferenceCard
   referenceCardContainer: {
     flexDirection:'column',
-    height: 250,
+    height: 300,
     borderColor: '#eeeeee',
     backgroundColor:'#dddddd',
     borderWidth: 10,
@@ -148,7 +148,6 @@ export const styles = StyleSheet.create({
     fontFamily: 'koho',
     fontSize: 18
   },
-
 
   referenceCardImage: {
     width: 50,

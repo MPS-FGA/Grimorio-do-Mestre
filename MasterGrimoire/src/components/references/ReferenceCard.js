@@ -40,6 +40,22 @@ class ReferenceCard extends Component {
       return data;
     }
 
+    let ability_bonuses = () => {
+      let data = [];
+      let abilities = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
+      let counter = 0;
+
+      for (ability_bonus of item.ability_bonuses) {
+        if (ability_bonus !== 0) {
+          data.push("+", ability_bonus + " " + abilities[counter] + "\n");
+        }
+
+        counter++;
+      }
+      return data;
+    }
+
+
     return  (
         <TouchableOpacity onPress={()=>this._onItemPress(item)} style={styles.referenceCardContainer}>
             <View style={styles.referenceCardTitleContainer}>
@@ -76,7 +92,7 @@ class ReferenceCard extends Component {
                     source={require('../../../assets/imgs/ability.png')}
                   />
                   <Text style={styles.referenceCardInfoTextBold}>Ability Bonuses</Text>
-                  <Text style={styles.referenceCardInfoText}>{item.ability_bonuses}</Text>
+                  <Text style={styles.referenceCardInfoText}>{ability_bonuses()}</Text>
                 </View> ) : ( null ) }
               </View>
 
