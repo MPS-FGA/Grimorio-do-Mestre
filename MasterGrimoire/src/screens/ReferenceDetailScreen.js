@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Text, View, FlatList, ScrollView, ActivityIndicator} from "react-native";
 import { styles } from '../styles/PagStyles';
 import Header from '../components/general/Header';
+import ReferenceClassDetail from '../components/references/ReferenceClassDetail';
 
 class ReferenceDetailScreen extends Component {
   constructor(props) {
@@ -31,9 +32,6 @@ class ReferenceDetailScreen extends Component {
     switch(this.state.referenceType) {
     case 'Races':
       renderedItem = this._renderRace();
-      break;
-    case 'Classes':
-      renderedItem = this._renderClass();
       break;
     default:
       renderedItem = <Text>Cannot render.</Text>
@@ -91,45 +89,6 @@ class ReferenceDetailScreen extends Component {
 
   }
 
-  _renderClass = () => {
-
-    let item = this.state.item;
-    return(
-      <View>
-        <Text><Text  >Hit dice</Text>: {item.hit_die}</Text>
-        {(typeof item.proficiencies !== 'undefined' && item.proficiencies.length > 0) && (
-            <View>
-              <Text><Text>Proficiencies</Text>: </Text>
-              {this._renderlistAtribute(item.proficiencies)}
-            </View>
-        )}
-
-        {(typeof item.proficiency_choices !== 'undefined'
-          && typeof item.proficiency_choices.from !== 'undefined' && item.proficiency_choices.from.length > 0) && (
-            <View>
-              <Text><Text >Proficiency choices</Text>:</Text>
-              <Text><Text>Can choose </Text>: {item.proficiency_choices.choose}</Text>
-              {this._renderlistAtribute(item.proficiency_choices.from)}
-            </View>
-        )}
-        {(typeof item.saving_throws !== 'undefined' && item.saving_throws.length > 0) && (
-            <View>
-              <Text><Text>Saving Throws</Text>: </Text>
-              {this._renderlistAtribute(item.saving_throws)}
-            </View>
-        )}
-
-        {(typeof item.subclasses !== 'undefined' && item.subclasses.length > 0) && (
-            <View>
-              <Text><Text>Subclasses</Text>: </Text>
-              {this._renderlistAtribute(item.subclasses)}
-            </View>
-        )}
-
-      </View>
-    )
-  }
-
   _renderlistAtribute = (listAtribute) => {
     return(
       <FlatList
@@ -165,7 +124,7 @@ class ReferenceDetailScreen extends Component {
   render() {
       return(
         <ScrollView >
-          {this._renderContext()}
+          <ReferenceClassDetail item={this.state.item}/>
         </ScrollView>
       )
   }
