@@ -6,7 +6,8 @@ import {
   Text,
   View,
   Picker,
-  TextInput } from "react-native";
+  TextInput,
+  ScrollView } from "react-native";
 import SPELLS from '../../data/Spells';
 import { SPELLS_PICKER_FILTERS } from '../../constants/General';
 import {styles} from '../../styles/PagStyles';
@@ -109,7 +110,7 @@ class Spells extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView>
         <TextInput
             style={{marginTop: 20, width: 200, backgroundColor: '#ffffff'}}
             value={this.state.pickerValues.spellName}
@@ -213,7 +214,7 @@ class Spells extends Component {
 
         {this._renderContext()}
 
-      </View>
+      </ScrollView>
     );
   }
 }
