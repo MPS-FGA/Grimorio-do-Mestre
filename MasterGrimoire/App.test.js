@@ -1,16 +1,11 @@
 import React from 'react';
 import App from './App';
 import MainScreen from './src/screens/MainScreen';
-import ContentList from './src/screens/ContentList';
-import DetailPage from './src/screens/DetailPage';
-import SpellsListPage from './src/screens/SpellsListPage';
+import ReferenceScreen from './src/screens/ReferenceScreen';
+import ReferenceDetailScreen from './src/screens/ReferenceDetailScreen';
+// import SpellsListPage from './src/screens/SpellsListPage';
 
 import renderer from 'react-test-renderer';
-
-it('renders without crashing', () => {
-  const rendered = renderer.create(<App />).toJSON();
-  expect(rendered).toBeTruthy();
-});
 
 describe('MainScreen test Suit', () => {
   it('renders MainScreen without crashing', () => {
@@ -19,8 +14,9 @@ describe('MainScreen test Suit', () => {
   });
 });
 
-describe('ContentList test Suit', () => {
-  it('renders ContentList without crashing', () => {
+
+describe('ReferenceScreen test Suit', () => {
+  it('renders ReferenceScreen without crashing', () => {
     const navigation = {state: {
         params: {
           option: jest.fn()
@@ -29,13 +25,14 @@ describe('ContentList test Suit', () => {
       setParams: jest.fn()
     }
 
-    const rendered = renderer.create(<ContentList navigation={navigation} />).toJSON();
+    const rendered = renderer.create(<ReferenceScreen navigation={navigation} />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
 
-describe('DetailPage test Suit', () => {
-  it('renders DetailPage without crashing', () => {
+
+describe('ReferenceDetailScreen test Suit', () => {
+  it('renders ReferenceDetailScreen without crashing', () => {
     const navigation = {state: {
         params : {
           detailArg: {
@@ -49,11 +46,12 @@ describe('DetailPage test Suit', () => {
       setParams: jest.fn()
     }
 
-    const rendered = renderer.create(<DetailPage navigation={navigation} />).toJSON();
+    const rendered = renderer.create(<ReferenceDetailScreen navigation={navigation} />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
 
+/*
 describe('SpellsListPage test Suit', () => {
   it('renders SpellsListPage without crashing', () => {
     const navigation = {state: {
@@ -68,3 +66,4 @@ describe('SpellsListPage test Suit', () => {
     expect(rendered).toMatchSnapshot();
   });
 });
+*/
