@@ -7,7 +7,8 @@ import {
   View,
   Picker,
   TextInput,
-  ScrollView } from "react-native";
+  ScrollView,
+  StyleSheet } from "react-native";
 import SPELLS from '../../data/Spells';
 import { SPELLS_PICKER_FILTERS } from '../../constants/General';
 import {styles} from '../../styles/PagStyles';
@@ -22,6 +23,14 @@ class Spells extends Component {
       pickerValues: SPELLS_PICKER_FILTERS,
     };
   }
+styles = StyleSheet.create({
+    containePicker :{
+        width: 400,
+        backgroundColor: '#ffffff',
+        textAlign: 'center'
+      },
+})
+
 
   _filterByName = (value) => {
     result = SPELLS
@@ -112,13 +121,13 @@ class Spells extends Component {
     return (
       <ScrollView>
         <TextInput
-            style={{marginTop: 20, width: 200, backgroundColor: '#ffffff'}}
+            style={styles.containePicker}
             value={this.state.pickerValues.spellName}
             onChangeText={this._filterByName}
           />
 
         <Picker
-          style={{width: 200, backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.spellLevel}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, spellLevel: itemValue }})
@@ -136,7 +145,7 @@ class Spells extends Component {
         </Picker>
 
         <Picker
-          style={{width: 200, backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.castingTime}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, castingTime: itemValue }})
@@ -154,7 +163,7 @@ class Spells extends Component {
         </Picker>
 
         <Picker
-          style={{width: 200, backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.class}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, class: itemValue }})
@@ -171,7 +180,7 @@ class Spells extends Component {
         </Picker>
 
         <Picker
-          style={{width: 200, backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.school}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, school: itemValue }})
@@ -188,7 +197,7 @@ class Spells extends Component {
         </Picker>
 
         <Picker
-          style={{width: 200, backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.ritual}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, ritual: itemValue }})
@@ -201,14 +210,14 @@ class Spells extends Component {
         <Button
           onPress={this._filterByPickers}
           title="Filter"
-          color="#841584"
+          color="#000000"
           accessibilityLabel="Filter Spells"
         />
 
         <Button
           onPress={this._resetFilters}
           title="Reset Filters"
-          color="#841584"
+          color="#000000"
           accessibilityLabel="Reset Filters"
         />
 
