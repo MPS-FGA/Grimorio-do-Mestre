@@ -207,20 +207,34 @@ styles = StyleSheet.create({
           <Picker.Item label="No" value="no" />
         </Picker>
 
+    <View style={{marginTop:30}}>
         <Button
           onPress={this._filterByPickers}
           title="Filter"
           color="#000000"
           accessibilityLabel="Filter Spells"
         />
+    </View>
 
+    <View style={{marginTop:10,marginBottom: 20}}>
         <Button
           onPress={this._resetFilters}
           title="Reset Filters"
           color="#000000"
           accessibilityLabel="Reset Filters"
         />
+      </View>
 
+      <View style={{marginBottom:20}}>
+        <Text color="#000000"
+          style={{textAlign:'center',
+                  fontWeight: 'bold',
+                  fontSize: 50,
+                  fontFamily: 'koho-bold'
+                }}>
+        SPELLS </Text>
+      
+      </View>
         {this._renderContext()}
 
       </ScrollView>
