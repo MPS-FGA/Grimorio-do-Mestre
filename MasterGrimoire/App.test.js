@@ -3,7 +3,7 @@ import App from './App';
 import MainScreen from './src/screens/MainScreen';
 import ReferenceScreen from './src/screens/ReferenceScreen';
 import ReferenceDetailScreen from './src/screens/ReferenceDetailScreen';
-// import SpellsListPage from './src/screens/SpellsListPage';
+import Header from './src/components/general/Header';
 
 import renderer from 'react-test-renderer';
 
@@ -51,19 +51,12 @@ describe('ReferenceDetailScreen test Suit', () => {
   });
 });
 
-/*
-describe('SpellsListPage test Suit', () => {
-  it('renders SpellsListPage without crashing', () => {
-    const navigation = {state: {
-        params : {
-          option : jest.fn()
-        }
-      },
-      setParams: jest.fn()
-    }
 
-    const rendered = renderer.create(<SpellsListPage navigation={navigation} />).toJSON();
+describe('Header test Suit', () => {
+  it('renders Header without crashing', () => {
+    const navigation = {state: jest.fn()}
+    
+    const rendered = renderer.create(<Header navigation={navigation} />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
-*/
