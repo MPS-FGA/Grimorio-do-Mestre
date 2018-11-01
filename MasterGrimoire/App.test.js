@@ -7,6 +7,7 @@ import Header from './src/components/general/Header';
 import ListEmpty from './src/components/general/ListEmpty';
 import ReferenceCard from './src/components/references/ReferenceCard';
 import ReferenceClassDetail from './src/components/references/ReferenceClassDetail';
+import Spells from './src/components/references/Spells';
 
 import renderer from 'react-test-renderer';
 
@@ -86,6 +87,13 @@ describe('ReferenceClassDetail test Suit', () => {
     const item = {item: jest.fn()}
 
     const rendered = renderer.create(<ReferenceClassDetail item={item} />).toJSON();
+    expect(rendered).toMatchSnapshot();
+  });
+});
+
+describe('Spells test Suit', () => {
+  it('renders Spells without crashing', () => {
+    const rendered = renderer.create(<Spells />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
