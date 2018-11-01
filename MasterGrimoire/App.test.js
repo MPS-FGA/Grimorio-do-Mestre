@@ -5,6 +5,7 @@ import ReferenceScreen from './src/screens/ReferenceScreen';
 import ReferenceDetailScreen from './src/screens/ReferenceDetailScreen';
 import Header from './src/components/general/Header';
 import ReferenceCard from './src/components/references/ReferenceCard';
+import ReferenceClassDetail from './src/components/references/ReferenceClassDetail';
 
 import renderer from 'react-test-renderer';
 
@@ -67,6 +68,15 @@ describe('Header test Suit', () => {
 describe('ReferenceCard test Suit', () => {
   it('renders ReferenceCard without crashing', () => {
     const rendered = renderer.create(<ReferenceCard />).toJSON();
+    expect(rendered).toMatchSnapshot();
+  });
+});
+
+describe('ReferenceClassDetail test Suit', () => {
+  it('renders ReferenceClassDetail without crashing', () => {
+    const item = {item: jest.fn()}
+
+    const rendered = renderer.create(<ReferenceClassDetail item={item} />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
