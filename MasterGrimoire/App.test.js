@@ -4,8 +4,10 @@ import MainScreen from './src/screens/MainScreen';
 import ReferenceScreen from './src/screens/ReferenceScreen';
 import ReferenceDetailScreen from './src/screens/ReferenceDetailScreen';
 import Header from './src/components/general/Header';
+import ReferenceCard from './src/components/references/ReferenceCard';
 
 import renderer from 'react-test-renderer';
+
 
 describe('MainScreen test Suit', () => {
   it('renders MainScreen without crashing', () => {
@@ -55,8 +57,16 @@ describe('ReferenceDetailScreen test Suit', () => {
 describe('Header test Suit', () => {
   it('renders Header without crashing', () => {
     const navigation = {state: jest.fn()}
-    
+
     const rendered = renderer.create(<Header navigation={navigation} />).toJSON();
+    expect(rendered).toMatchSnapshot();
+  });
+});
+
+
+describe('ReferenceCard test Suit', () => {
+  it('renders ReferenceCard without crashing', () => {
+    const rendered = renderer.create(<ReferenceCard />).toJSON();
     expect(rendered).toMatchSnapshot();
   });
 });
