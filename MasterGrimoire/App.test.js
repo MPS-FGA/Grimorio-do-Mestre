@@ -19,6 +19,12 @@ describe('MainScreen test Suit', () => {
   });
 });
 
+describe('App test Suit', () => {
+  it('renders App without crashing', () => {
+    const rendered = renderer.create(<App />).toJSON();
+    expect(rendered).toMatchSnapshot();
+  });
+});
 
 describe('ReferenceScreen test Suit', () => {
   it('renders ReferenceScreen without crashing', () => {
