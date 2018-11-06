@@ -1,40 +1,39 @@
 import React, { Component } from "react";
-import { 
-  TouchableOpacity, 
-  FlatList, 
-  Button, 
-  Text, 
-  View, 
+import {
+  TouchableOpacity,
+  FlatList,
+  Button,
+  Text,
+  View,
   Picker,
-  TextInput } from "react-native";
-import SPELLS_DETAILS from '../constants/spellsDetails';
-import { SPELLS_PICKER_FILTERS } from '../constants/generalConstants';
-import {styles} from '../styles/PagStyles';
+  TextInput,
+  ScrollView,
+  StyleSheet } from "react-native";
+import SPELLS from '../../data/Spells';
+import { SPELLS_PICKER_FILTERS } from '../../constants/General';
+import {styles} from '../../styles/PagStyles';
 
-class SpellsListPage extends Component {
+class Spells extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      spellsList: SPELLS_DETAILS,
+      spellsList: SPELLS,
       pageInfo: [],
       pickerValues: SPELLS_PICKER_FILTERS,
     };
   }
+styles = StyleSheet.create({
+    containePicker :{
+        width: 400,
+        backgroundColor: '#ffffff',
+        textAlign: 'center'
+      },
+})
 
-  componentWillMount(){
-    const { option } = this.props.navigation.state.params
-    this.setState({ pageInfo: option })
-  }
 
-  componentDidMount() {
-    // Used to change the header title dynamically.
-    const title = this.state.pageInfo.option
-    this.props.navigation.setParams({title: title})
-  }
-  
   _filterByName = (value) => {
-    result = SPELLS_DETAILS
+    result = SPELLS
 
     inputText = value
     this.setState({ pickerValues: { ...this.state.pickerValues, spellName: inputText }})
@@ -44,7 +43,7 @@ class SpellsListPage extends Component {
  }
 
   _filterByPickers = () => {
-    result = SPELLS_DETAILS
+    result = SPELLS
     filters = this.state.pickerValues
 
     if (filters.spellLevel != ""){
@@ -71,13 +70,13 @@ class SpellsListPage extends Component {
       result = result.filter(x => x.ritual == filters.ritual)
       console.log('Ritual: ' + result.length)
     }
-    
+
     this.setState({ spellsList: result })
   }
 
   // To reset filters come back the state to initial state
   _resetFilters = () => {
-    this.setState({ spellsList: SPELLS_DETAILS })
+    this.setState({ spellsList: SPELLS })
     this.setState({ pickerValues: SPELLS_PICKER_FILTERS })
   }
 
@@ -92,24 +91,10 @@ class SpellsListPage extends Component {
   }
 
   _onItemPress = (item) => {
-    this.props.navigation.navigate("DetailPage", 
+    this.props.navigation.navigate("ReferenceDetailScreen",
       { detailArg : { item : item, pageInfo : this.state.pageInfo } })
   }
 
-  static navigationOptions = ({ navigation }) => {
-    return {
-      // If it finds the title defined dynamically, uses it. If not, uses default message.
-      title: navigation.getParam('title', 'Options Available'),
-      headerStyle: {
-        backgroundColor: '#8D6AB1',
-      },
-      headerTintColor: '#ffffff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-        fontSize: 30,
-      },
-    };
-  };
 
   _renderContext(){
     if(this.state.spellsList.length == 0){
@@ -127,22 +112,22 @@ class SpellsListPage extends Component {
           ItemSeparatorComponent={()=>
             <View style={styles.separator} />
           }
-        /> 
+        />
       )
     }
   }
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView>
         <TextInput
-            style={{marginTop: 20, width: '80%', backgroundColor: '#ffffff'}}
+            style={styles.containePicker}
             value={this.state.pickerValues.spellName}
             onChangeText={this._filterByName}
           />
-        
+
         <Picker
-          style={{width: '80%', backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.spellLevel}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, spellLevel: itemValue }})
@@ -160,7 +145,7 @@ class SpellsListPage extends Component {
         </Picker>
 
         <Picker
-          style={{width: '80%', backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.castingTime}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, castingTime: itemValue }})
@@ -178,7 +163,7 @@ class SpellsListPage extends Component {
         </Picker>
 
         <Picker
-          style={{width: '80%', backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.class}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, class: itemValue }})
@@ -195,7 +180,7 @@ class SpellsListPage extends Component {
         </Picker>
 
         <Picker
-          style={{width: '80%', backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.school}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, school: itemValue }})
@@ -212,7 +197,7 @@ class SpellsListPage extends Component {
         </Picker>
 
         <Picker
-          style={{width: '80%', backgroundColor: '#ffffff'}}
+          style={styles.containePicker}
           selectedValue={this.state.pickerValues.ritual}
           onValueChange={(itemValue, itemIndex) => this.setState({
             pickerValues: { ...this.state.pickerValues, ritual: itemValue }})
@@ -222,25 +207,39 @@ class SpellsListPage extends Component {
           <Picker.Item label="No" value="no" />
         </Picker>
 
+    <View style={{marginTop:30}}>
         <Button
           onPress={this._filterByPickers}
           title="Filter"
-          color="#841584"
+          color="#000000"
           accessibilityLabel="Filter Spells"
         />
+    </View>
 
+    <View style={{marginTop:10,marginBottom: 20}}>
         <Button
           onPress={this._resetFilters}
           title="Reset Filters"
-          color="#841584"
+          color="#000000"
           accessibilityLabel="Reset Filters"
         />
-
-        {this._renderContext()}
-        
       </View>
+
+      <View style={{marginBottom:20}}>
+        <Text color="#000000"
+          style={{textAlign:'center',
+                  fontWeight: 'bold',
+                  fontSize: 50,
+                  fontFamily: 'koho-bold'
+                }}>
+        SPELLS </Text>
+      
+      </View>
+        {this._renderContext()}
+
+      </ScrollView>
     );
   }
 }
 
-export default SpellsListPage;
+export default Spells;

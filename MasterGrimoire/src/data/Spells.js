@@ -1,4 +1,4 @@
-const SPELLS_DETAILS = [
+const SPELLS = [
 {
     "_id": "5a52bc3a559f00418e532f30",
     "casting_time": "1 action",
@@ -43,7 +43,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/1"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f2e",
     "casting_time": "1 action",
@@ -84,7 +84,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/2"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f2f",
     "casting_time": "1 action",
@@ -129,7 +129,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/3"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f42",
     "casting_time": "1 minute",
@@ -173,7 +173,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/4"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f32",
     "casting_time": "1 action",
@@ -219,7 +219,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/5"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f33",
     "casting_time": "1 action",
@@ -269,7 +269,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/6"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f31",
     "casting_time": "1 action",
@@ -302,7 +302,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/7"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f35",
     "casting_time": "1 minute",
@@ -349,7 +349,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/8"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f36",
     "casting_time": "1 action",
@@ -394,7 +394,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/9"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f34",
     "casting_time": "1 action",
@@ -427,7 +427,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/10"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f37",
     "casting_time": "1 action",
@@ -473,7 +473,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/11"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f39",
     "casting_time": "1 hour",
@@ -517,7 +517,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/12"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f38",
     "casting_time": "1 action",
@@ -556,7 +556,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/13"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3c",
     "casting_time": "1 action",
@@ -602,7 +602,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/14"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3a",
     "casting_time": "1 action",
@@ -641,7 +641,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/15"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3b",
     "casting_time": "1 action",
@@ -679,7 +679,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/16"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3d",
     "casting_time": "1 action",
@@ -722,7 +722,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/17"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3f",
     "casting_time": "1 hour",
@@ -768,7 +768,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/18"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f3e",
     "casting_time": "1 minute",
@@ -812,7 +812,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/19"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f40",
     "casting_time": "8 hours",
@@ -850,7 +850,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/20"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f41",
     "casting_time": "1 action",
@@ -895,7 +895,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/21"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f44",
     "casting_time": "1 action",
@@ -949,7 +949,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/22"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f43",
     "casting_time": "1 action",
@@ -995,7 +995,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/23"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f45",
     "casting_time": "1 action",
@@ -1039,7 +1039,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/24"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f48",
     "casting_time": "1 action",
@@ -1091,7 +1091,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/25"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f47",
     "casting_time": "1 action",
@@ -1126,7 +1126,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/26"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f46",
     "casting_time": "1 action",
@@ -1158,7 +1158,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/27"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f49",
     "casting_time": "1 action",
@@ -1207,7 +1207,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/28"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4a",
     "casting_time": "1 action",
@@ -1260,7 +1260,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/29"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4b",
     "casting_time": "1 action",
@@ -1314,7 +1314,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/30"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4c",
     "casting_time": "1 action",
@@ -1355,7 +1355,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/31"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4d",
     "casting_time": "1 action",
@@ -1398,7 +1398,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/32"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4e",
     "casting_time": "1 action",
@@ -1446,7 +1446,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/33"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f4f",
     "casting_time": "1 action",
@@ -1491,7 +1491,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/34"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f50",
     "casting_time": "1 action",
@@ -1532,7 +1532,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/35"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f51",
     "casting_time": "1 action",
@@ -1573,7 +1573,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/36"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f52",
     "casting_time": "1 action",
@@ -1628,7 +1628,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/37"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f53",
     "casting_time": "1 action",
@@ -1674,7 +1674,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/38"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f55",
     "casting_time": "1 action",
@@ -1718,7 +1718,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/39"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f54",
     "casting_time": "10 minutes",
@@ -1770,7 +1770,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/40"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f57",
     "casting_time": "1 hour",
@@ -1804,7 +1804,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/41"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f62",
     "casting_time": "1 action",
@@ -1849,7 +1849,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/42"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f56",
     "casting_time": "1 action",
@@ -1895,7 +1895,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/43"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5d",
     "casting_time": "1 action",
@@ -1952,7 +1952,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/44"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f58",
     "casting_time": "1 minute",
@@ -1992,7 +1992,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/45"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f59",
     "casting_time": "1 minute",
@@ -2039,7 +2039,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/46"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5a",
     "casting_time": "1 action",
@@ -2090,7 +2090,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/47"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5b",
     "casting_time": "1 action",
@@ -2136,7 +2136,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/48"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5e",
     "casting_time": "1 action",
@@ -2186,7 +2186,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/49"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5c",
     "casting_time": "1 action",
@@ -2236,7 +2236,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/50"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f5f",
     "casting_time": "1 minute",
@@ -2272,7 +2272,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/51"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f60",
     "casting_time": "1 minute",
@@ -2320,7 +2320,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/52"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f61",
     "casting_time": "1 minute",
@@ -2361,7 +2361,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/53"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f63",
     "casting_time": "1 minute",
@@ -2406,7 +2406,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/54"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f64",
     "casting_time": "1 action",
@@ -2453,7 +2453,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/55"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f65",
     "casting_time": "1 minute",
@@ -2488,7 +2488,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/56"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f68",
     "casting_time": "1 action",
@@ -2537,7 +2537,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/57"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f67",
     "casting_time": "10 minutes",
@@ -2572,7 +2572,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/58"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f66",
     "casting_time": "1 action",
@@ -2614,7 +2614,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/59"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f73",
     "casting_time": "1 action",
@@ -2667,7 +2667,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/60"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6d",
     "casting_time": "10 minutes",
@@ -2715,7 +2715,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/61"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f69",
     "casting_time": "1 action",
@@ -2763,7 +2763,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/62"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6a",
     "casting_time": "1 action",
@@ -2812,7 +2812,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/63"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6c",
     "casting_time": "1 minute",
@@ -2858,7 +2858,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/64"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6b",
     "casting_time": "1 minute",
@@ -2910,7 +2910,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/65"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6f",
     "casting_time": "1 action",
@@ -2969,7 +2969,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/66"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f6e",
     "casting_time": "1 action",
@@ -3016,7 +3016,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/67"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f70",
     "casting_time": "1 action",
@@ -3067,7 +3067,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/68"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f71",
     "casting_time": "1 action",
@@ -3117,7 +3117,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/69"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f72",
     "casting_time": "1 action",
@@ -3175,7 +3175,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/70"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f74",
     "casting_time": "1 action",
@@ -3217,7 +3217,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/71"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f76",
     "casting_time": "1 action",
@@ -3260,7 +3260,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/72"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f75",
     "casting_time": "1 action",
@@ -3295,7 +3295,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/73"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f77",
     "casting_time": "1 action",
@@ -3336,7 +3336,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/74"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7b",
     "casting_time": "1 action",
@@ -3397,7 +3397,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/75"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f78",
     "casting_time": "1 action",
@@ -3448,7 +3448,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/76"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f87",
     "casting_time": "1 action",
@@ -3498,7 +3498,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/77"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f79",
     "casting_time": "1 action",
@@ -3542,7 +3542,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/78"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7a",
     "casting_time": "1 action",
@@ -3588,7 +3588,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/79"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7d",
     "casting_time": "1 action",
@@ -3631,7 +3631,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/80"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7c",
     "casting_time": "1 action",
@@ -3673,7 +3673,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/81"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f80",
     "casting_time": "1 action",
@@ -3740,7 +3740,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/82"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7f",
     "casting_time": "1 action",
@@ -3780,7 +3780,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/83"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f7e",
     "casting_time": "1 bonus action",
@@ -3816,7 +3816,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/84"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f81",
     "casting_time": "1 bonus action",
@@ -3851,7 +3851,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/85"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f82",
     "casting_time": "1 action",
@@ -3891,7 +3891,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/86"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f84",
     "casting_time": "1 action",
@@ -3940,7 +3940,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/87"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f83",
     "casting_time": "1 action",
@@ -3985,7 +3985,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/88"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f85",
     "casting_time": "1 minute",
@@ -4035,7 +4035,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/89"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f86",
     "casting_time": "1 action",
@@ -4082,7 +4082,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/90"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8b",
     "casting_time": "1 action",
@@ -4121,7 +4121,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/91"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f89",
     "casting_time": "1 action",
@@ -4186,7 +4186,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/92"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8a",
     "casting_time": "1 action",
@@ -4233,7 +4233,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/93"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f88",
     "casting_time": "1 action",
@@ -4271,7 +4271,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/94"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8c",
     "casting_time": "1 action",
@@ -4311,7 +4311,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/95"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8d",
     "casting_time": "1 action",
@@ -4365,7 +4365,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/96"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f95",
     "casting_time": "1 bonus action",
@@ -4409,7 +4409,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/97"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f91",
     "casting_time": "1 action",
@@ -4458,7 +4458,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/98"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8e",
     "casting_time": "10 minutes",
@@ -4491,7 +4491,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/99"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f8f",
     "casting_time": "1 action",
@@ -4527,7 +4527,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/100"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f90",
     "casting_time": "1 action",
@@ -4562,7 +4562,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/101"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f92",
     "casting_time": "1 action",
@@ -4607,7 +4607,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/102"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f94",
     "casting_time": "1 action",
@@ -4658,7 +4658,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/103"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f93",
     "casting_time": "1 reaction",
@@ -4703,7 +4703,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/104"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f96",
     "casting_time": "1 action",
@@ -4751,7 +4751,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/105"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f97",
     "casting_time": "10 minutes",
@@ -4791,7 +4791,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/106"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9c",
     "casting_time": "1 minute",
@@ -4829,7 +4829,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/107"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9f",
     "casting_time": "1 action",
@@ -4874,7 +4874,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/108"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f98",
     "casting_time": "1 action",
@@ -4914,7 +4914,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/109"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9a",
     "casting_time": "1 action",
@@ -4964,7 +4964,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/110"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f99",
     "casting_time": "1 action",
@@ -5004,7 +5004,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/111"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9b",
     "casting_time": "1 action",
@@ -5044,7 +5044,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/112"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9d",
     "casting_time": "1 bonus action",
@@ -5087,7 +5087,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/113"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532f9e",
     "casting_time": "1 action",
@@ -5132,7 +5132,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/114"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa0",
     "casting_time": "1 action",
@@ -5179,7 +5179,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/115"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa1",
     "casting_time": "1 action",
@@ -5219,7 +5219,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/116"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fae",
     "casting_time": "1 action",
@@ -5259,7 +5259,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/117"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa8",
     "casting_time": "1 action",
@@ -5308,7 +5308,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/118"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa3",
     "casting_time": "1 action",
@@ -5359,7 +5359,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/119"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa2",
     "casting_time": "10 minutes",
@@ -5395,7 +5395,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/120"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa5",
     "casting_time": "1 action",
@@ -5441,7 +5441,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/121"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa4",
     "casting_time": "1 minute",
@@ -5487,7 +5487,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/122"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa6",
     "casting_time": "1 action",
@@ -5542,7 +5542,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/123"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa7",
     "casting_time": "1 action",
@@ -5580,7 +5580,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/124"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532faa",
     "casting_time": "1 action",
@@ -5632,7 +5632,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/125"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fa9",
     "casting_time": "1 action",
@@ -5676,7 +5676,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/126"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fab",
     "casting_time": "1 minute",
@@ -5727,7 +5727,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/127"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fac",
     "casting_time": "1 action",
@@ -5770,7 +5770,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/128"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fad",
     "casting_time": "1 action",
@@ -5804,7 +5804,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/129"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb3",
     "casting_time": "1 action",
@@ -5838,7 +5838,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/130"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532faf",
     "casting_time": "1 action",
@@ -5879,7 +5879,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/131"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb0",
     "casting_time": "1 hour",
@@ -5936,7 +5936,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/132"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb1",
     "casting_time": "1 action",
@@ -5975,7 +5975,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/133"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb2",
     "casting_time": "1 action",
@@ -6019,7 +6019,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/134"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb4",
     "casting_time": "1 action",
@@ -6064,7 +6064,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/135"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb5",
     "casting_time": "10 minutes",
@@ -6118,7 +6118,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/136"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb9",
     "casting_time": "1 action",
@@ -6158,7 +6158,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/137"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb6",
     "casting_time": "1 action",
@@ -6197,7 +6197,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/138"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb7",
     "casting_time": "1 action",
@@ -6246,7 +6246,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/139"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fba",
     "casting_time": "24 hours",
@@ -6306,7 +6306,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/140"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fb8",
     "casting_time": "10 minutes",
@@ -6357,7 +6357,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/141"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fbb",
     "casting_time": "1 action",
@@ -6388,7 +6388,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/142"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fbd",
     "casting_time": "1 action",
@@ -6435,7 +6435,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/143"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fbc",
     "casting_time": "1 action",
@@ -6473,7 +6473,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/144"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fbe",
     "casting_time": "1 bonus action",
@@ -6519,7 +6519,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/145"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fbf",
     "casting_time": "1 action",
@@ -6565,7 +6565,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/146"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc8",
     "casting_time": "10 minutes",
@@ -6603,7 +6603,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/147"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc2",
     "casting_time": "1 action",
@@ -6643,7 +6643,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/148"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc0",
     "casting_time": "1 action",
@@ -6686,7 +6686,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/149"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc1",
     "casting_time": "1 action",
@@ -6734,7 +6734,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/150"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc4",
     "casting_time": "1 action",
@@ -6799,7 +6799,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/151"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc3",
     "casting_time": "1 action",
@@ -6832,7 +6832,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/152"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc5",
     "casting_time": "1 action",
@@ -6882,7 +6882,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/153"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc7",
     "casting_time": "1 action",
@@ -6932,7 +6932,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/154"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc6",
     "casting_time": "1 minute",
@@ -6975,7 +6975,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/155"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fc9",
     "casting_time": "1 minute",
@@ -7023,7 +7023,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/156"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fcf",
     "casting_time": "1 minute",
@@ -7074,7 +7074,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/157"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd2",
     "casting_time": "1 action",
@@ -7111,7 +7111,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/158"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fcb",
     "casting_time": "1 action",
@@ -7150,7 +7150,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/159"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fca",
     "casting_time": "1 action",
@@ -7200,7 +7200,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/160"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fcc",
     "casting_time": "1 minute",
@@ -7236,7 +7236,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/161"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fce",
     "casting_time": "1 action",
@@ -7293,7 +7293,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/162"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fcd",
     "casting_time": "1 action",
@@ -7328,7 +7328,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/163"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd0",
     "casting_time": "1 action",
@@ -7378,7 +7378,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/164"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd1",
     "casting_time": "1 action",
@@ -7424,7 +7424,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/165"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd9",
     "casting_time": "10 minutes",
@@ -7466,7 +7466,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/166"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fdc",
     "casting_time": "1 action",
@@ -7526,7 +7526,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/167"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd5",
     "casting_time": "1 action",
@@ -7570,7 +7570,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/168"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd3",
     "casting_time": "1 action",
@@ -7620,7 +7620,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/169"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd4",
     "casting_time": "1 action",
@@ -7670,7 +7670,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/170"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd6",
     "casting_time": "1 action",
@@ -7716,7 +7716,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/171"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd7",
     "casting_time": "1 action",
@@ -7776,7 +7776,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/172"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fd8",
     "casting_time": "1 action",
@@ -7836,7 +7836,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/173"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fda",
     "casting_time": "1 action",
@@ -7889,7 +7889,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/174"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fdb",
     "casting_time": "1 action",
@@ -7931,7 +7931,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/175"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fdd",
     "casting_time": "1 action",
@@ -7981,7 +7981,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/176"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fdf",
     "casting_time": "1 minute",
@@ -8038,7 +8038,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/177"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe2",
     "casting_time": "1 minute",
@@ -8077,7 +8077,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/178"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fde",
     "casting_time": "1 action",
@@ -8120,7 +8120,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/179"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe0",
     "casting_time": "1 minute",
@@ -8165,7 +8165,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/180"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe7",
     "casting_time": "1 bonus action",
@@ -8208,7 +8208,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/181"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe1",
     "casting_time": "1 minute",
@@ -8247,7 +8247,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/182"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe5",
     "casting_time": "1 action",
@@ -8302,7 +8302,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/183"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe4",
     "casting_time": "1 action",
@@ -8349,7 +8349,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/184"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe3",
     "casting_time": "1 action",
@@ -8380,7 +8380,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/185"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe6",
     "casting_time": "1 bonus action",
@@ -8418,7 +8418,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/186"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff3",
     "casting_time": "1 action",
@@ -8468,7 +8468,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/187"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe8",
     "casting_time": "1 action",
@@ -8501,7 +8501,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/188"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff9",
     "casting_time": "1 action",
@@ -8543,7 +8543,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/189"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532feb",
     "casting_time": "1 minute",
@@ -8598,7 +8598,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/190"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fe9",
     "casting_time": "1 action",
@@ -8645,7 +8645,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/191"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fea",
     "casting_time": "1 action",
@@ -8681,7 +8681,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/192"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fec",
     "casting_time": "1 action",
@@ -8716,7 +8716,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/193"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fed",
     "casting_time": "1 action",
@@ -8768,7 +8768,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/194"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fee",
     "casting_time": "10 minutes",
@@ -8810,7 +8810,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/195"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fef",
     "casting_time": "1 action",
@@ -8862,7 +8862,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/196"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff1",
     "casting_time": "1 action",
@@ -8898,7 +8898,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/197"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff0",
     "casting_time": "1 bonus action",
@@ -8945,7 +8945,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/198"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff2",
     "casting_time": "1 action",
@@ -8987,7 +8987,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/199"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff5",
     "casting_time": "1 action",
@@ -9031,7 +9031,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/200"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff6",
     "casting_time": "1 action",
@@ -9076,7 +9076,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/201"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff4",
     "casting_time": "1 action",
@@ -9122,7 +9122,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/202"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff8",
     "casting_time": "1 action",
@@ -9168,7 +9168,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/203"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ff7",
     "casting_time": "1 action",
@@ -9207,7 +9207,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/204"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ffa",
     "casting_time": "1 action",
@@ -9241,7 +9241,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/205"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ffe",
     "casting_time": "1 minute",
@@ -9278,7 +9278,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/206"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533004",
     "casting_time": "10 minutes",
@@ -9314,7 +9314,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/207"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ffd",
     "casting_time": "1 hour",
@@ -9363,7 +9363,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/208"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ffb",
     "casting_time": "1 action",
@@ -9414,7 +9414,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/209"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532ffc",
     "casting_time": "1 action",
@@ -9465,7 +9465,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/210"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533000",
     "casting_time": "1 action",
@@ -9514,7 +9514,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/211"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e532fff",
     "casting_time": "1 action",
@@ -9556,7 +9556,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/212"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533001",
     "casting_time": "1 action",
@@ -9599,7 +9599,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/213"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533002",
     "casting_time": "10 minutes",
@@ -9637,7 +9637,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/214"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533003",
     "casting_time": "1 action",
@@ -9692,7 +9692,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/215"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533005",
     "casting_time": "1 action",
@@ -9743,7 +9743,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/216"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533007",
     "casting_time": "1 action",
@@ -9792,7 +9792,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/217"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300b",
     "casting_time": "10 minutes",
@@ -9836,7 +9836,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/218"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533008",
     "casting_time": "1 action",
@@ -9874,7 +9874,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/219"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533006",
     "casting_time": "1 action",
@@ -9914,7 +9914,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/220"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533009",
     "casting_time": "1 action",
@@ -9954,7 +9954,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/221"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300a",
     "casting_time": "1 action",
@@ -10010,7 +10010,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/222"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300d",
     "casting_time": "1 action",
@@ -10065,7 +10065,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/223"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300c",
     "casting_time": "1 action",
@@ -10114,7 +10114,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/224"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300e",
     "casting_time": "1 action",
@@ -10158,7 +10158,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/225"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53300f",
     "casting_time": "1 hour",
@@ -10207,7 +10207,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/226"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533016",
     "casting_time": "1 action",
@@ -10248,7 +10248,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/227"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533018",
     "casting_time": "1 action",
@@ -10289,7 +10289,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/228"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533011",
     "casting_time": "1 minute",
@@ -10331,7 +10331,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/229"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533010",
     "casting_time": "1 hour",
@@ -10394,7 +10394,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/230"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533012",
     "casting_time": "1 action",
@@ -10442,7 +10442,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/231"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533013",
     "casting_time": "1 action",
@@ -10478,7 +10478,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/232"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533014",
     "casting_time": "1 action",
@@ -10520,7 +10520,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/233"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533015",
     "casting_time": "1 hour",
@@ -10561,7 +10561,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/234"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533017",
     "casting_time": "1 action",
@@ -10604,7 +10604,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/235"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533019",
     "casting_time": "1 action",
@@ -10650,7 +10650,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/236"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301b",
     "casting_time": "1 action",
@@ -10691,7 +10691,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/237"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302a",
     "casting_time": "1 action",
@@ -10728,7 +10728,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/238"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533024",
     "casting_time": "1 bonus action",
@@ -10771,7 +10771,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/239"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301a",
     "casting_time": "1 action",
@@ -10819,7 +10819,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/240"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301d",
     "casting_time": "10 minutes",
@@ -10886,7 +10886,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/241"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301c",
     "casting_time": "1 action",
@@ -10921,7 +10921,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/242"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301e",
     "casting_time": "1 action",
@@ -10967,7 +10967,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/243"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53301f",
     "casting_time": "1 action",
@@ -11009,7 +11009,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/244"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533020",
     "casting_time": "1 action",
@@ -11056,7 +11056,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/245"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533021",
     "casting_time": "1 action",
@@ -11091,7 +11091,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/246"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533023",
     "casting_time": "1 action",
@@ -11133,7 +11133,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/247"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533022",
     "casting_time": "1 action",
@@ -11187,7 +11187,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/248"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533025",
     "casting_time": "1 reaction",
@@ -11227,7 +11227,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/249"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533026",
     "casting_time": "1 bonus action",
@@ -11269,7 +11269,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/250"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533028",
     "casting_time": "1 bonus action",
@@ -11307,7 +11307,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/251"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533027",
     "casting_time": "1 action",
@@ -11348,7 +11348,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/252"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533029",
     "casting_time": "1 action",
@@ -11397,7 +11397,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/253"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302c",
     "casting_time": "1 action",
@@ -11445,7 +11445,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/254"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302b",
     "casting_time": "12 hours",
@@ -11481,7 +11481,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/255"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533035",
     "casting_time": "1 action",
@@ -11532,7 +11532,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/256"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302f",
     "casting_time": "1 action",
@@ -11584,7 +11584,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/257"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302d",
     "casting_time": "1 action",
@@ -11633,7 +11633,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/258"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53302e",
     "casting_time": "1 action",
@@ -11677,7 +11677,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/259"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533030",
     "casting_time": "1 action",
@@ -11720,7 +11720,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/260"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533031",
     "casting_time": "1 action",
@@ -11768,7 +11768,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/261"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533032",
     "casting_time": "1 action",
@@ -11818,7 +11818,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/262"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533033",
     "casting_time": "1 action",
@@ -11865,7 +11865,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/263"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533034",
     "casting_time": "1 action",
@@ -11907,7 +11907,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/264"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533036",
     "casting_time": "1 bonus action",
@@ -11952,7 +11952,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/265"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303b",
     "casting_time": "1 action",
@@ -12008,7 +12008,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/266"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303e",
     "casting_time": "1 action",
@@ -12054,7 +12054,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/267"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533039",
     "casting_time": "1 action",
@@ -12104,7 +12104,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/268"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533037",
     "casting_time": "1 action",
@@ -12144,7 +12144,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/269"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533038",
     "casting_time": "1 action",
@@ -12196,7 +12196,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/270"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303a",
     "casting_time": "1 action",
@@ -12239,7 +12239,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/271"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303c",
     "casting_time": "1 action",
@@ -12282,7 +12282,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/272"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533040",
     "casting_time": "1 minute",
@@ -12343,7 +12343,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/273"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303f",
     "casting_time": "1 action",
@@ -12385,7 +12385,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/274"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53303d",
     "casting_time": "1 action",
@@ -12419,7 +12419,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/275"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533041",
     "casting_time": "1 action",
@@ -12458,7 +12458,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/276"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533045",
     "casting_time": "1 minute",
@@ -12500,7 +12500,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/277"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304c",
     "casting_time": "1 action",
@@ -12542,7 +12542,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/278"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533046",
     "casting_time": "1 action",
@@ -12594,7 +12594,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/279"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533042",
     "casting_time": "1 action",
@@ -12629,7 +12629,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/280"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533043",
     "casting_time": "1 minute",
@@ -12673,7 +12673,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/281"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533044",
     "casting_time": "1 action",
@@ -12726,7 +12726,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/282"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533047",
     "casting_time": "1 action",
@@ -12757,7 +12757,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/283"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533048",
     "casting_time": "1 action",
@@ -12798,7 +12798,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/284"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304a",
     "casting_time": "1 action",
@@ -12850,7 +12850,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/285"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533049",
     "casting_time": "1 hour",
@@ -12889,7 +12889,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/286"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304b",
     "casting_time": "1 action",
@@ -12938,7 +12938,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/287"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304f",
     "casting_time": "1 action",
@@ -12985,7 +12985,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/288"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533057",
     "casting_time": "1 action",
@@ -13033,7 +13033,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/289"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533051",
     "casting_time": "1 action",
@@ -13076,7 +13076,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/290"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304d",
     "casting_time": "1 action",
@@ -13128,7 +13128,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/291"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53304e",
     "casting_time": "1 action",
@@ -13162,7 +13162,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/292"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533050",
     "casting_time": "1 action",
@@ -13200,7 +13200,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/293"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533052",
     "casting_time": "1 action",
@@ -13251,7 +13251,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/294"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533054",
     "casting_time": "1 action",
@@ -13289,7 +13289,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/295"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533053",
     "casting_time": "1 action",
@@ -13329,7 +13329,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/296"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533055",
     "casting_time": "1 action",
@@ -13383,7 +13383,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/297"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533056",
     "casting_time": "1 action",
@@ -13437,7 +13437,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/298"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533058",
     "casting_time": "1 action",
@@ -13487,7 +13487,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/299"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e533059",
     "casting_time": "1 action",
@@ -13518,7 +13518,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/300"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53305b",
     "casting_time": "1 minute",
@@ -13552,7 +13552,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/301"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53305d",
     "casting_time": "1 action",
@@ -13596,7 +13596,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/302"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53305e",
     "casting_time": "1 action",
@@ -13638,7 +13638,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/303"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53305a",
     "casting_time": "1 action",
@@ -13669,7 +13669,7 @@ const SPELLS_DETAILS = [
     },
     "subclasses": [],
     "url": "http://www.dnd5eapi.co/api/spells/304"
-}, 
+},
 {
     "_id": "5a52bc3a559f00418e53305c",
     "casting_time": "1 action",
@@ -13718,7 +13718,7 @@ const SPELLS_DETAILS = [
         }
     ],
     "url": "http://www.dnd5eapi.co/api/spells/305"
-} 
+}
 ]
 
-export default SPELLS_DETAILS;
+export default SPELLS;
